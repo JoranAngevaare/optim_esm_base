@@ -28,10 +28,11 @@ jobs:
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
+          activate-environment: "synda"
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: run install
         run:
           |
-            bash create_env.sh 
+            bash install_software.sh 
             python -c "import synda" || { echo 'Error' ; exit 1; }
