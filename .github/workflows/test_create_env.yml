@@ -1,12 +1,22 @@
-name: Pipy
+# Test package every time
+
+name: Create env
+
+# Controls when the action will run.
+
+# Trigger this code when a new release is published
 on:
   workflow_dispatch:
   release:
-    types: [ published ]
+    types: [ created ]
+  pull_request:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
-    name: Ex1 (${{ matrix.python-version }}, ${{ matrix.os }})
+    name: Create env (${{ matrix.python-version }}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
