@@ -6,6 +6,8 @@ py_version='3.8.16'
 echo "Start install, conda create $env_name, python=$py_version and set synda dir to $synda_dir_name"
 yes |  conda create -n $env_name python=$py_version
 # sudo apt-get install myproxy
+conda init bash
+source ~/.bashrc
 conda activate $env_name
 yes | conda install -c IPSL synda
 yes | conda install -c conda-forge cdo
