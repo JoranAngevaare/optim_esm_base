@@ -1,0 +1,16 @@
+bottleneck
+# esgpull
+h5netcdf
+ipython
+jupyter
+jupyter_contrib_nbextensions
+jupyter_contrib_nbextensions
+jupyter-resource-usage
+matplotlib
+netcdf4
+netcdf4
+numba
+numpy
+pandas
+scipy
+xarray
