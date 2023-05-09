@@ -15,6 +15,6 @@ conda install -c IPSL synda  --yes
 announce "start building myproxy"
 conda install -c conda-forge myproxy --yes
 announce "install requirements"
-pip install -r requirements.txt
+pip install -r pinned_versions.txt
 announce "set ST_HOME"
 conda env config vars set ST_HOME=$synda_dir_name
