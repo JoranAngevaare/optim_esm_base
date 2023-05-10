@@ -34,5 +34,5 @@ jobs:
       - name: run install
         run:
           |
-            bash install_software.sh 
+            bash install_software.sh || { echo 'failed' ; exit 1; }
             python -c "import synda" || { echo 'Error' ; exit 1; }
