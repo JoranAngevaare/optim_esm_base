@@ -40,4 +40,4 @@ jobs:
             conda info
             conda activate synda
             bash install_software.sh || { echo 'failed' ; exit 1; }
-            python -c "import synda" || { echo 'Error' ; exit 1; }
+            pytest test/test_imports.py || { echo 'Error' ; exit 1; }
