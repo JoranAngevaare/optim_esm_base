@@ -11,10 +11,10 @@ announce "Start install on $(which python), and set synda dir to $synda_dir_name
 mkdir $synda_dir_name
 
 announce "start building synda"
-conda install -c IPSL synda  --yes
+conda install -c IPSL synda  --yes -q
 announce "start building myproxy"
-conda install -c conda-forge myproxy --yes
+conda install -c conda-forge myproxy --yes -q
 announce "install requirements"
-pip install -r pinned_versions.txt
+pip install -r pinned_versions.txt -q
 announce "set ST_HOME"
 conda env config vars set ST_HOME=$synda_dir_name
