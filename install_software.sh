@@ -12,6 +12,8 @@ mkdir $synda_dir_name
 
 announce "start building synda"
 conda install -c IPSL synda  --yes
+announce "start building xesmf"
+conda install -c conda-forge xesmf
 announce "start building myproxy"
 conda install -c conda-forge myproxy --yes
 announce "install requirements"
