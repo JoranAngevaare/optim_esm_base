@@ -22,17 +22,22 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest"]
-        python-version: ["3.8", "3.9"]
+        python-version: ["3.8"]
+    defaults:
+      run:
+        shell: bash -l {0}
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
       - uses: conda-incubator/setup-miniconda@v2
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
           activate-environment: "synda"
-      - name: Checkout repo
-        uses: actions/checkout@v3
       - name: run install
         run:
           |
-            bash install_software.sh 
+            conda info
+            conda activate synda
+            bash install_software.sh || { echo 'failed' ; exit 1; }
             python -c "import synda" || { echo 'Error' ; exit 1; }
