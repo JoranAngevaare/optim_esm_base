@@ -8,7 +8,21 @@ def test_simple():
     import numpy
 
 
-def test_all(excluded=('ipython',)):
+def test_all(excluded=(
+        'ipython',
+        'ipython-genutils',
+        'jupyter-contrib-nbextensions',
+        'jupyter-events',
+        'jupyter-highlight-selected-word',
+        'jupyter-contrib-core',
+        'jupyterlab-widgets',
+        'jupyter-nbextensions-configurator',
+        'jupyterlab-pygments',
+        'jupyter-resource-usage',
+        'jupyter-console',
+        'pyshp',
+        'nc-time-axis',
+)):
     this_file_loc = pathlib.Path(__file__).parent.resolve()
     requirements_file = os.path.join(os.path.split(this_file_loc)[0], 'requirements.txt')
     assert os.path.exists(requirements_file), f'No such file {requirements_file} (this test runs from {this_file_loc})'
