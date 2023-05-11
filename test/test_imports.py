@@ -24,7 +24,7 @@ def test_all(excluded=('ipython',)):
             except Exception as e:
                 print(f'{module} ran into {e}')
                 missing.append(module)
-
+    missing = set(missing) - set(excluded)
     if missing:
         raise ValueError(f'Missing {len(missing)} modules:' + '\n'.join(missing))
 
