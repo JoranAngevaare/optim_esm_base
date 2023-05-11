@@ -32,6 +32,8 @@ def test_all(excluded=(
             if req.startswith('#'):
                 continue
             module = req.split('==')[0]
+            if not module:
+                continue
             print(f'load {module}')
             try:
                 print(importlib.import_module(module))
@@ -41,4 +43,3 @@ def test_all(excluded=(
     missing = set(missing) - set(excluded)
     if missing:
         raise ValueError(f'Missing {len(missing)} modules:' + '\n'.join(missing))
-
