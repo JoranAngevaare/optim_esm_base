@@ -15,7 +15,7 @@ conda install -c IPSL synda  --yes -q
 
 from_conda_forge="myproxy cartopy xesmf"
 announce "install from confa forge: $from_conda_forge"
-conda install -c conda-forge $from_conda_forge--yes -q
+conda install -c conda-forge $from_conda_forge --yes -q
 
 announce "install requirements"
 pip install -r requirements.txt -q
