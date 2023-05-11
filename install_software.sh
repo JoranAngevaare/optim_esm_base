@@ -12,11 +12,13 @@ mkdir $synda_dir_name
 
 announce "start building synda"
 conda install -c IPSL synda  --yes -q
-announce "start building myproxy"
-conda install -c conda-forge myproxy --yes -q
-announce "start building xesmf"
-conda install -c conda-forge xesmf
+
+from_conda_forge="myproxy cartopy xesmf"
+announce "install from confa forge: $from_conda_forge"
+conda install -c conda-forge $from_conda_forge--yes -q
+
 announce "install requirements"
 pip install -r requirements.txt -q
+
 announce "set ST_HOME"
 conda env config vars set ST_HOME=$synda_dir_name
