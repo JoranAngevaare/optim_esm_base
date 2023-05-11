@@ -32,7 +32,7 @@ pyshp==2.3.1
 pyproj==3.5.0
 pytest==7.3.1
 scipy==1.10.1
-synda==3.35
+# synda==3.35
 shapely==1.8.5
 tornado==6.3.1
 xarray==2023.1.0

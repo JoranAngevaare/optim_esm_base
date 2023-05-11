@@ -18,7 +18,7 @@ announce "install from confa forge: $from_conda_forge"
 conda install -c conda-forge $from_conda_forge --yes -q
 
 announce "install requirements"
-pip install -r requirements.txt -q
+pip install -r requirements.txt
 
 announce "set ST_HOME"
 conda env config vars set ST_HOME=$synda_dir_name
