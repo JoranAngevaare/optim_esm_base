@@ -14,7 +14,9 @@ announce "start building synda"
 conda install -c IPSL synda  --yes -q
 announce "start building myproxy"
 conda install -c conda-forge myproxy --yes -q
+announce "start building xesmf"
+conda install -c conda-forge xesmf
 announce "install requirements"
-pip install -r pinned_versions.txt -q
+pip install -r requirements.txt -q
 announce "set ST_HOME"
 conda env config vars set ST_HOME=$synda_dir_name
