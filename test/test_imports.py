@@ -31,7 +31,8 @@ def test_all(excluded=(
         for req in requirements.read().split('\n'):
             if req.startswith('#'):
                 continue
-            module = req.split('==')[0]
+            # Strip any comments or == > etc signs
+            module = req.split('=')[0].split('<')[0].split('>')[0].split('#')[0].split(' ')[0]
             if not module:
                 continue
             print(f'load {module}')
