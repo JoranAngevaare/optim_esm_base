@@ -20,6 +20,7 @@ def test_all(excluded=(
         'jupyterlab-pygments',
         'jupyter-resource-usage',
         'jupyter-console',
+        'jupyter_server_terminals',
         'pyshp',
         'nc-time-axis',
 )):
