@@ -35,5 +35,6 @@ scipy==1.10.1
 # synda==3.35
 shapely==1.8.5
 tornado==6.3.1
+treelib==1.6.4
 xarray==2023.1.0
 xmip==0.7.1
