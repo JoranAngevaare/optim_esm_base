@@ -21,6 +21,7 @@ jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.7
 jupyter-resource-usage==0.7.2
 matplotlib==3.7.1
+memory_profiler==0.61.0
 mistune==2.0.5
 # myproxy
 netCDF4==1.6.3
@@ -36,5 +37,6 @@ synda==3.35
 shapely==1.8.5
 tornado==6.3.1
 treelib==1.6.4
+tqdm==4.65.0
 xarray==2023.1.0
 xmip==0.7.1
