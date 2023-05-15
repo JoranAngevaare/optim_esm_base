@@ -10,10 +10,10 @@ function announce {
 announce "Start install on $(which python), and set synda dir to $synda_dir_name"
 mkdir $synda_dir_name
 
-announce "start building synda cdo"
+announce "start building synda"
 conda install -c IPSL synda  --yes -q
 
-from_conda_forge="myproxy cartopy xesmf"
+from_conda_forge="myproxy cartopy xesmf cdo"
 announce "install from confa forge: $from_conda_forge"
 conda install -c conda-forge $from_conda_forge --yes -q
 
