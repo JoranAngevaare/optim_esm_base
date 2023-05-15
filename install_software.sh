@@ -7,6 +7,8 @@ function announce {
     echo
 }
 
+conda install -c "conda-forge/label/cf201901" cdo
+
 announce "Start install on $(which python), and set synda dir to $synda_dir_name"
 mkdir $synda_dir_name
 
