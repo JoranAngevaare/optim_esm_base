@@ -13,7 +13,7 @@ mkdir $synda_dir_name
 announce "start building synda"
 conda install -c IPSL synda  --yes -q
 
-from_conda_forge="myproxy cartopy xesmf"
+from_conda_forge="myproxy cartopy xesmf python-cdo"
 announce "install from confa forge: $from_conda_forge"
 conda install -c conda-forge $from_conda_forge --yes -q
 
