@@ -38,5 +38,5 @@ shapely==1.8.5
 tornado==6.3.1
 treelib==1.6.4
 tqdm==4.65.0
-xarray==2023.1.0
+xarray==2023.4.2
 xmip==0.7.1
