@@ -15,7 +15,7 @@ conda config --add channels IPSL
 conda config --set channel_priority flexible
 #from_conda_forge="myproxy==6.2.6 cartopy==0.20.2 xesmf==0.6.3 cdo==2.0.3"
 #announce "install from confa forge: $from_conda_forge"
-conda install --file conda_requirements.txt --yes -q
+conda install -c conda-forge --file conda_requirements.txt --yes -q
 
 announce "install requirements"
 pip install -r requirements.txt
