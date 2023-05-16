@@ -11,7 +11,7 @@ announce "Start install on $(which python), and set synda dir to $synda_dir_name
 mkdir $synda_dir_name
 
 synda_v="synda==3.35"
-announce "install $(synda_v) from IPSL"
+announce "install $synda_v from IPSL"
 conda install -c IPSL $synda_v  --yes -q
 
 announce "install from confa forge: $(cat conda_requirements.txt)"
