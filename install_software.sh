@@ -10,11 +10,13 @@ function announce {
 announce "Start install on $(which python), and set synda dir to $synda_dir_name"
 mkdir $synda_dir_name
 
+announce "install from confa forge: $from_conda_forge"
+conda install -c IPSL synda==3.35  --yes -q
+
 conda config --add channels conda-forge
-conda config --add channels IPSL
 conda config --set channel_priority flexible
-#from_conda_forge="myproxy==6.2.6 cartopy==0.20.2 xesmf==0.6.3 cdo==2.0.3"
-#announce "install from confa forge: $from_conda_forge"
+
+announce "install from confa forge: $(cat conda_requirements.txt)"
 conda install --file conda_requirements.txt --yes -q
 
 announce "install requirements"
