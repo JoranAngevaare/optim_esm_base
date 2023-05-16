@@ -1,24 +1,12 @@
-synda_dir_name="${1:-"$(pwd)/synda"}"
+env_name="${1:-"optimesm"}"
+synda_dir_name="${2:-"($pwd)/synda"}"
+py_version='3.8.16'
 
-function announce {
-    echo
-    echo "#######################################################################################"
-    echo "## $1       ("`date -u`")"
-    echo
-}
 
-announce "Start install on $(which python), and set synda dir to $synda_dir_name"
+echo "Start install, conda create $env_name, python=$py_version and set synda dir to $synda_dir_name"
 mkdir $synda_dir_name
 
-conda config --add channels conda-forge
-conda config --add channels IPSL
-conda config --set channel_priority flexible
-#from_conda_forge="myproxy==6.2.6 cartopy==0.20.2 xesmf==0.6.3 cdo==2.0.3"
-#announce "install from confa forge: $from_conda_forge"
-conda install --file conda_requirements.txt --yes -q
+echo "start building env"
+conda create -n $env_name python=$py_version --yes
 
-announce "install requirements"
-pip install -r requirements.txt
-
-announce "set ST_HOME"
-# conda env config vars set ST_HOME=$synda_dir_name
+conda activate $env_name
