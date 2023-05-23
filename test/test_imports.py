@@ -9,6 +9,7 @@ def test_simple():
 
 
 def test_all(excluded=(
+        'gitpython',
         'ipython',
         'ipython-genutils',
         'jupyter-contrib-nbextensions',
