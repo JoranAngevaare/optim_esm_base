@@ -23,6 +23,7 @@ def test_all(excluded=(
         'jupyter_server_terminals',
         'pyshp',
         'nc-time-axis',
+        'texlive-core',
 )):
     this_file_loc = pathlib.Path(__file__).parent.resolve()
     requirements_file = os.path.join(os.path.split(this_file_loc)[0], 'requirements.txt')
