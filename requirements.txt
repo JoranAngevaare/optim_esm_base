@@ -3,6 +3,7 @@ cdo==1.5.7
 dask==2023.5.0
 h5netcdf==1.1.0
 gitpython==3.1.31
+immutabledict==2.2.4
 ipython==8.12.2
 ipython-genutils==0.2.0
 latex==0.7.0
