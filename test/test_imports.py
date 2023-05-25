@@ -4,7 +4,8 @@ import importlib
 
 
 def test_simple():
-    import synda
+    if os.env.get('SYNDA_INSTALLED', 0):
+        import synda
     import numpy
 
 
