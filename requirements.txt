@@ -42,3 +42,4 @@ treelib==1.6.4
 tqdm==4.65.0
 xarray==2023.1.0
 xmip==0.7.1
+xrft==1.0.1
