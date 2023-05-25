@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    name: Create env (${{ matrix.python-version }}, ${{ matrix.os }} ${{ matrix.include_synda }} synda
+    name: Create env (${{ matrix.python-version }}, ${{ matrix.os }}) ${{ matrix.include_synda }} synda
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -45,7 +45,7 @@ jobs:
             bash install_software.sh full || { echo 'ERROR' ; exit 1; }
             - name: run install
       - name: run install
-        if: matrix.include_synda == 'no'
+        if: matrix.include_synda == 'without'
         run:
           |
             conda info
