@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    name: Create env (${{ matrix.python-version }}, ${{ matrix.os }} ${{ include_synda}} synda
+    name: Create env (${{ matrix.python-version }}, ${{ matrix.os }} ${{ matrix.include_synda }} synda
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
