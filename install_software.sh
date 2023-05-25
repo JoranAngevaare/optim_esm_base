@@ -1,4 +1,5 @@
-synda_dir_name="${1:-"$(pwd)/synda"}"
+synda_dir_name="${2:-"$(pwd)/synda"}"
+full_install="${1:-"full"}"
 
 function announce {
     echo
@@ -7,12 +8,14 @@ function announce {
     echo
 }
 
-announce "Start install on $(which python), and set synda dir to $synda_dir_name"
-mkdir $synda_dir_name
+if [[ full_install == "full" ]]; then
+    announce "Start install on $(which python), and set synda dir to $synda_dir_name"
+    mkdir $synda_dir_name
 
-synda_v="synda==3.35"
-announce "install $synda_v from IPSL"
-conda install -c IPSL $synda_v  --yes -q
+    synda_v="synda==3.35"
+    announce "install $synda_v from IPSL"
+    conda install -c IPSL $synda_v  --yes -q
+fi
 
 announce "install from confa forge: $(cat conda_requirements.txt)"
 conda install -c conda-forge --file conda_requirements.txt --yes -q
