@@ -38,14 +38,17 @@ jobs:
           activate-environment: "synda"
       - name: run install
         if: matrix.include_synda == 'with'
+        env:
+          SYNDA_INSTALLED : 1
         run:
           |
             conda info
             conda activate synda
             bash install_software.sh full || { echo 'ERROR' ; exit 1; }
-            - name: run install
       - name: run install
         if: matrix.include_synda == 'without'
+        env:
+          SYNDA_INSTALLED : 0
         run:
           |
             conda info
