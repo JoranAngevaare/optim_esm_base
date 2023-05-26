@@ -44,7 +44,7 @@ function announce {
 if [[ $no_synda == 1 ]];
 then
     echo "Skip SYNDA install"
-    mamba env config vars set BASE_SYNDA_CDO=1
+    conda env config vars set BASE_SYNDA_CDO=1
 else
     announce "Start install on $(which python), and set synda dir to $synda_dir_name"
     if [[ -d "$synda_dir_name" ]]
@@ -56,10 +56,10 @@ else
     
     synda_v="synda==3.35"
     announce "install $synda_v from IPSL"
-    mamba install -c IPSL $synda_v  --yes -q
+    conda install -c IPSL $synda_v  --yes -q
     
     announce "set ST_HOME"
-    mamba env config vars set ST_HOME=$synda_dir_name
+    conda env config vars set ST_HOME=$synda_dir_name
 fi
 
 if [[ $no_cdo == 1 ]];
@@ -67,15 +67,11 @@ then
     echo "Skip CDO install"
     announce "install from confa forge:\n$(cat conda_requirements.txt | grep -v cdo)"
     cat conda_requirements.txt | grep -v cdo >> .tmp.txt
-    mamba install -c conda-forge --file .tmp.txt --yes -q
-    announce "Double checking install via conda"
-    conda install --file .tmp.txt --yes -q
+    conda install -c conda-forge --file .tmp.txt --yes -q
     rm .tmp.txt
-    mamba env config vars set BASE_NO_CDO=1
+    conda env config vars set BASE_NO_CDO=1
 else
     announce "install from confa forge:\n$(cat conda_requirements.txt)"
-    mamba install --file conda_requirements.txt --yes -q
-    announce "Double checking install via conda"
     conda install --file conda_requirements.txt --yes -q
 fi
 
