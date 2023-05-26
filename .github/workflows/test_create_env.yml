@@ -16,13 +16,14 @@ on:
 
 jobs:
   build:
-    name: Create env (${{ matrix.python-version }}, ${{ matrix.os }})
+    name: Create env (${{ matrix.python-version }}, ${{ matrix.os }}) ${{ matrix.install }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest", "ubuntu-20.04"]
         python-version: ["3.8"]
+        install: ['full', 'fast']
     defaults:
       run:
         # This is needed otherwise we can't activate the conda installation
@@ -36,11 +37,19 @@ jobs:
           python-version: ${{ matrix.python-version }}
           activate-environment: "synda"
       - name: run install
+        if: matrix.install == 'full'
         run:
           |
             conda info
             conda activate synda
             bash install_software.sh || { echo 'ERROR' ; exit 1; }
+      - name: run install
+        if: matrix.install == 'fast'
+        run:
+          |
+            conda info
+            conda activate synda
+            bash install_software.sh --no_synda --no_cdo || { echo 'ERROR' ; exit 1; }
       - name: run tests
         run:
           |

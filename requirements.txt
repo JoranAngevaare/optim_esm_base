@@ -35,7 +35,6 @@ pyshp==2.3.1
 pyproj==3.5.0
 pytest==7.3.1
 scipy==1.10.1
-synda==3.35
 shapely==2.0.1
 tornado==6.3.2
 treelib==1.6.4

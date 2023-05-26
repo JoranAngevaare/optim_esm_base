@@ -4,7 +4,8 @@ import importlib
 
 
 def test_simple():
-    import synda
+    if os.environ.get('BASE_NO_SYNDA', 0):
+        import synda
     import numpy
 
 
@@ -36,6 +37,8 @@ def test_all(excluded=(
                 continue
             # Strip any comments or == > etc signs
             module = req.split('=')[0].split('<')[0].split('>')[0].split('#')[0].split(' ')[0]
+            if module == 'cdo' and os.environ.get('BASE_NO_CDO', 0):
+                print(f'Skip CDO, as it\'t not installed')
             if not module:
                 continue
             print(f'load {module}')
