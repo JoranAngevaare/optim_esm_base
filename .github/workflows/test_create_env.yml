@@ -45,8 +45,6 @@ jobs:
             bash install_software.sh || { echo 'ERROR' ; exit 1; }
       - name: run install
         if: matrix.install == 'fast'
-        env:
-          SYNDA_INSTALLED
         run:
           |
             conda info
