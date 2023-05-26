@@ -65,15 +65,21 @@ fi
 if [[ $no_cdo == 1 ]];
 then
     echo "Skip CDO install"
-    announce "install from confa forge:\n$(cat conda_requirements.txt | grep -v cdo)"
-    cat conda_requirements.txt | grep -v cdo >> .tmp.txt
-    mamba install -c conda-forge --file .tmp.txt --yes -q
-    rm .tmp.txt
+    cat conda_requirements.txt | grep -v cdo >> tmp.txt
     mamba env config vars set BASE_NO_CDO=1
 else
-    announce "install from confa forge:\n$(cat conda_requirements.txt)"
-    mamba install -c conda-forge --file conda_requirements.txt --yes -q
+    cat conda_requirements.txt | grep -v "somethingsomething" >> tmp.txt
 fi
+
+# Todo, this is akward, I think mamba does not parse --file well 
+# See https://github.com/JoranAngevaare/optim_esm_base/pull/54
+announce "install from conda forge:\n$(cat tmp.txt)"
+for dep in $(cat tmp.txt);
+do
+    announce "install $dep";
+    mamba install -c conda-forge "$dep" --yes;
+done
+rm tmp.txt
 
 announce "install requirements"
 pip install -r requirements.txt
