@@ -45,10 +45,14 @@ jobs:
             hashFiles('conda_requirements.txt') }}   
       - uses: conda-incubator/setup-miniconda@v2
         with:
-          auto-update-conda: true
-          python-version: ${{ matrix.python-version }}
-          activate-environment: "synda"
-          use-only-tar-bz2: true
+            use-only-tar-bz2: true
+            miniforge-variant: Mambaforge
+            miniforge-version: latest
+            use-mamba: true
+            auto-update-conda: true
+            python-version: ${{ matrix.python-version }}
+            activate-environment: "synda"
+            mamba-version: "*"
       - name: run install
         if: matrix.install == 'full'
         run:
