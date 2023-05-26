@@ -72,7 +72,9 @@ else
 fi
 
 announce "install from conda forge:\n$(cat tmp.txt)"
-mamba install -c conda-forge --file tmp.txt --yes -q
+for dep in $(cat tmp.txt):
+    announce "install" $dep
+    mamba install -c conda-forge $dep --yes -q
 rm tmp.txt
 
 announce "install requirements"
