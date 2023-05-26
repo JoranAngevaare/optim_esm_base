@@ -72,7 +72,7 @@ then
     conda env config vars set BASE_NO_CDO=1
 else
     announce "install from confa forge:\n$(cat conda_requirements.txt)"
-    conda install --file conda_requirements.txt --yes -q
+    conda install  -c conda-forge --file conda_requirements.txt --yes -q
 fi
 
 announce "install requirements"
