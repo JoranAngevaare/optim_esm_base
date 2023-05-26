@@ -46,18 +46,22 @@ jobs:
           |
             conda info
             conda activate synda
-            mamba search cdo
-            mamba install cdo==2.0.3
-            bash install_software.sh || { echo 'ERROR' ; exit 1; }
+            bash install_software.sh
       - name: run install
         if: matrix.install == 'fast'
         run:
           |
             conda info
             conda activate synda
-            bash install_software.sh --no_synda --no_cdo || { echo 'ERROR' ; exit 1; }
+            bash install_software.sh --no_synda --no_cdo
       - name: run tests
         run:
           |
           conda activate synda
-          pytest test/test_imports.py || { echo 'Error' ; exit 1; }
+          pytest test/test_imports.py
+      - name: List packages
+        run:
+           | 
+           conda list
+           echo "Pip freze"
+           pip freeze

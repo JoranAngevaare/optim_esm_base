@@ -71,6 +71,8 @@ else
     cat conda_requirements.txt | grep -v "somethingsomething" >> tmp.txt
 fi
 
+# Todo, this is akward, I think mamba does not parse --file well 
+# See https://github.com/JoranAngevaare/optim_esm_base/pull/54
 announce "install from conda forge:\n$(cat tmp.txt)"
 for dep in $(cat tmp.txt);
 do
