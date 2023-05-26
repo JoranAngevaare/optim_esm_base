@@ -31,21 +31,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Cache conda
-        uses: actions/cache@v2
-        env:
-          # Increase this value to reset cache if etc/example-environment.yml has not changed
-          CACHE_NUMBER: 0
-        with:
-          path: ~/conda_pkgs_dir
-          key:
-            ${{ matrix.os }} ${{ matrix.install }} ${{ matrix.python-version }}-conda-${{
-            env.CACHE_NUMBER }}-${{
-            hashFiles('install_software.sh') }}-${{
-            hashFiles('conda_requirements.txt') }}   
       - uses: conda-incubator/setup-miniconda@v2
         with:
-            use-only-tar-bz2: true
             miniforge-variant: Mambaforge
             miniforge-version: latest
             use-mamba: true
