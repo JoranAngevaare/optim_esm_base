@@ -30,19 +30,7 @@ jobs:
         shell: bash -l {0}
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
-      - name: Cache conda
-        uses: actions/cache@v2
-        env:
-          # Increase this value to reset cache if etc/example-environment.yml has not changed
-          CACHE_NUMBER: 1
-        with:
-          path: ~/conda_pkgs_dir
-          key:
-            ${{ matrix.os }} ${{ matrix.install }} ${{ matrix.python-version }}-conda-${{
-            env.CACHE_NUMBER }}-${{
-            hashFiles('install_software.sh') }}-${{
-            hashFiles('conda_requirements.txt') }}   
+        uses: actions/checkout@v3 
       - uses: conda-incubator/setup-miniconda@v2
         with:
             auto-update-conda: true
@@ -54,16 +42,22 @@ jobs:
           |
             conda info
             conda activate synda
-            bash install_software.sh || { echo 'ERROR' ; exit 1; }
+            bash install_software.sh
       - name: run install
         if: matrix.install == 'fast'
         run:
           |
             conda info
             conda activate synda
-            bash install_software.sh --no_synda --no_cdo || { echo 'ERROR' ; exit 1; }
+            bash install_software.sh --no_synda --no_cdo
       - name: run tests
         run:
           |
           conda activate synda
-          pytest test/test_imports.py || { echo 'Error' ; exit 1; }
+          pytest test/test_imports.py
+      - name: List packages
+        run:
+           | 
+           conda list
+           echo "Pip freze"
+           pip freeze

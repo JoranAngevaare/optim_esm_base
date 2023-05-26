@@ -75,5 +75,15 @@ else
     conda install  -c conda-forge --file conda_requirements.txt --yes -q
 fi
 
+# Todo, this is akward, I think mamba does not parse --file well 
+# See https://github.com/JoranAngevaare/optim_esm_base/pull/54
+announce "install from conda forge:\n$(cat tmp.txt)"
+for dep in $(cat tmp.txt);
+do
+    announce "install $dep";
+    mamba install -c conda-forge "$dep" --yes;
+done
+rm tmp.txt
+
 announce "install requirements"
 pip install -r requirements.txt
