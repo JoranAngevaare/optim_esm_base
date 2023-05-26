@@ -73,6 +73,7 @@ then
 else
     announce "install from confa forge:\n$(cat conda_requirements.txt)"
     mamba install --file conda_requirements.txt --yes -q
+    conda install -c conda-forge cartopy
 fi
 
 announce "install requirements"
