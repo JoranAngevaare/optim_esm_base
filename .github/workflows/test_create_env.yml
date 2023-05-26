@@ -35,7 +35,7 @@ jobs:
         uses: actions/cache@v2
         env:
           # Increase this value to reset cache if etc/example-environment.yml has not changed
-          CACHE_NUMBER: 0
+          CACHE_NUMBER: 1
         with:
           path: ~/conda_pkgs_dir
           key:
@@ -46,8 +46,6 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with:
             use-only-tar-bz2: true
-            miniforge-variant: Mambaforge
-            miniforge-version: latest
             use-mamba: true
             auto-update-conda: true
             python-version: ${{ matrix.python-version }}
