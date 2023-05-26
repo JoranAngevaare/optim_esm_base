@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest", "ubuntu-20.04"]
-        python-version: ["3.8.16"]
+        python-version: ["3.8"]
         install: ['full', 'fast']
     defaults:
       run:
