@@ -65,14 +65,15 @@ fi
 if [[ $no_cdo == 1 ]];
 then
     echo "Skip CDO install"
-    cat conda_requirements.txt | grep -v cdo >> .tmp.txt
+    cat conda_requirements.txt | grep -v cdo >> tmp.txt
     mamba env config vars set BASE_NO_CDO=1
 else
-    cat conda_requirements.txt >> .tmp.txt
+    cat conda_requirements.txt | grep -v "somethingsomething" >> tmp.txt
 fi
-announce "install from conda forge:\n$(.tmp.txt)"
-mamba install -c conda-forge --file .tmp.txt --yes -q
-rm .tmp.txt
+
+announce "install from conda forge:\n$(cat tmp.txt)"
+mamba install -c conda-forge --file tmp.txt --yes -q
+rm tmp.txt
 
 announce "install requirements"
 pip install -r requirements.txt
