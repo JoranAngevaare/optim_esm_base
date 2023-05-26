@@ -68,12 +68,15 @@ then
     announce "install from confa forge:\n$(cat conda_requirements.txt | grep -v cdo)"
     cat conda_requirements.txt | grep -v cdo >> .tmp.txt
     mamba install -c conda-forge --file .tmp.txt --yes -q
+    announce "Double checking install via conda"
+    conda install --file .tmp.txt --yes -q
     rm .tmp.txt
     mamba env config vars set BASE_NO_CDO=1
 else
     announce "install from confa forge:\n$(cat conda_requirements.txt)"
     mamba install --file conda_requirements.txt --yes -q
-    conda install -c conda-forge cartopy
+    announce "Double checking install via conda"
+    conda install --file conda_requirements.txt --yes -q
 fi
 
 announce "install requirements"
