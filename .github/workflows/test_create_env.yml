@@ -36,6 +36,7 @@ jobs:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
           activate-environment: "synda"
+          mamba-version: " 1.4.1"
       - name: run install
         if: matrix.install == 'full'
         run:
