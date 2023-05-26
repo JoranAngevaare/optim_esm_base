@@ -51,6 +51,7 @@ jobs:
             python-version: ${{ matrix.python-version }}
             activate-environment: "synda"
             mamba-version: "*"
+            channels: conda-forge,defaults
       - name: run install
         if: matrix.install == 'full'
         run:
