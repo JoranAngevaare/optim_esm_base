@@ -46,6 +46,8 @@ jobs:
           |
             conda info
             conda activate synda
+            mamba search cdo
+            mamba install cdo==2.0.3
             bash install_software.sh || { echo 'ERROR' ; exit 1; }
       - name: run install
         if: matrix.install == 'fast'
