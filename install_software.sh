@@ -83,3 +83,5 @@ rm tmp.txt
 
 announce "install requirements"
 pip install -r requirements.txt
+
+announce "installation complete"
