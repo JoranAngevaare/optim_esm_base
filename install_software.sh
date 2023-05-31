@@ -70,7 +70,7 @@ if [[ $only_synda == 1 ]];
 then
     announce stopping here, synda is installed
     exit 0
-
+fi
 
 if [[ $no_cdo == 1 ]];
 then
