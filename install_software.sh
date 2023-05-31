@@ -12,6 +12,10 @@ while [[ $# -gt 0 ]]; do
             no_cdo=1
             shift
         ;;
+        --only_synda)
+            only_synda=1
+            shift
+        ;;
         --synda_dir)
             synda_dir="$2"
             shift 2
@@ -61,6 +65,12 @@ else
     announce "set ST_HOME"
     mamba env config vars set ST_HOME=$synda_dir_name
 fi
+
+if [[ $only_synda == 1 ]];
+then
+    announce stopping here, synda is installed
+    exit 0
+
 
 if [[ $no_cdo == 1 ]];
 then
