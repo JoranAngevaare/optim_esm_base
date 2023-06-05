@@ -1,4 +1,4 @@
-cdo==1.5.7
+cdo==2.0.3
 cartopy==0.21.1
 texlive-core==20230313
 gh==2.25.1
