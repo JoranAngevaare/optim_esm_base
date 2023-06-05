@@ -4,6 +4,7 @@ coverage==6.5.0
 coveralls==3.3.1
 dask==2023.5.0
 h5netcdf==1.1.0
+geopy==2.3.0 
 gitpython==3.1.31
 immutabledict==2.2.4
 ipython==8.12.2
@@ -36,6 +37,7 @@ pandas==2.0.2
 pyshp==2.3.1
 pyproj==3.5.0
 pytest==7.3.1
+ruptures==1.1.7
 scipy==1.10.1
 shapely==2.0.1
 tornado==6.3.2
