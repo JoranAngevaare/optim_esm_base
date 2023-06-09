@@ -86,14 +86,20 @@ else
     cat conda_requirements.txt | grep -v "somethingsomething" >> tmp.txt
 fi
 
-# Todo, this is akward, I think mamba does not parse --file well
-# See https://github.com/JoranAngevaare/optim_esm_base/pull/54
-announce "install from conda forge:\n$(cat tmp.txt)"
-for dep in $(cat tmp.txt);
-do
-    announce "install $dep";
-    $installer install -c conda-forge "$dep" --yes;
-done
+if [[ "$installer" == 'conda' ]];
+then
+    announce "install from conda forge:\n$(cat tmp.txt)"
+    conda install  -c conda-forge --file tmp.txt --yes -q
+else
+    # Todo, this is akward, I think mamba does not parse --file well
+    # See https://github.com/JoranAngevaare/optim_esm_base/pull/54
+    announce "install from conda forge:\n$(cat tmp.txt)"
+    for dep in $(cat tmp.txt);
+    do
+        announce "install $dep";
+        $installer install -c conda-forge "$dep" --yes;
+    done
+fi
 rm tmp.txt
 
 announce "install requirements"
