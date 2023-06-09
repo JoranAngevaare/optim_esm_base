@@ -88,6 +88,7 @@ fi
 
 if $installer == 'conda';
 then
+    announce "install from conda forge:\n$(cat tmp.txt)"
     conda install  -c conda-forge --file tmp.txt --yes -q
 else
     # Todo, this is akward, I think mamba does not parse --file well
