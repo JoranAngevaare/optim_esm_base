@@ -50,7 +50,7 @@ def test_all(
                 .split(' ')[0]
             )
             if module == 'cdo' and os.environ.get('BASE_NO_CDO', 0):
-                print(f"Skip CDO, as it't not installed")
+                print(f'Skip CDO, as it\'t not installed')
             if not module:
                 continue
             print(f'load {module}')
