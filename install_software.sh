@@ -37,7 +37,7 @@ done
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
 
-installer="${installer:"mamba"}"
+installer="${installer:-"mamba"}"
 synda_dir_name="${synda_dir:-"$(pwd)/synda"}"
 
 echo "args are" synda_dir:$synda_dir_name no_synda:$no_synda no_cdo:$no_cdo installer:$installer
@@ -53,7 +53,7 @@ function announce {
 if [[ $no_synda == 1 ]];
 then
     echo "Skip SYNDA install"
-    $(installer) env config vars set BASE_SYNDA_CDO=1
+    $installer env config vars set BASE_SYNDA_CDO=1
 else
     announce "Start install on $(which python), and set synda dir to $synda_dir_name"
     if [[ -d "$synda_dir_name" ]]
@@ -65,10 +65,10 @@ else
     
     synda_v="synda==3.35"
     announce "install $synda_v from IPSL"
-    $(installer) install -c IPSL $synda_v  --yes -q
+    $installer install -c IPSL $synda_v  --yes -q
     
     announce "set ST_HOME"
-    $(installer) env config vars set ST_HOME=$synda_dir_name
+    $installer env config vars set ST_HOME=$synda_dir_name
 fi
 
 if [[ $only_synda == 1 ]];
@@ -81,7 +81,7 @@ if [[ $no_cdo == 1 ]];
 then
     echo "Skip CDO install"
     cat conda_requirements.txt | grep -v cdo >> tmp.txt
-    $(installer) env config vars set BASE_NO_CDO=1
+    $installer env config vars set BASE_NO_CDO=1
 else
     cat conda_requirements.txt | grep -v "somethingsomething" >> tmp.txt
 fi
@@ -92,7 +92,7 @@ announce "install from conda forge:\n$(cat tmp.txt)"
 for dep in $(cat tmp.txt);
 do
     announce "install $dep";
-    $(installer) install -c conda-forge "$dep" --yes;
+    $installer install -c conda-forge "$dep" --yes;
 done
 rm tmp.txt
 
