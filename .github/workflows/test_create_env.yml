@@ -18,8 +18,8 @@ jobs:
   build:
     name: Create env (${{ matrix.python-version }}, ${{ matrix.os }}) ${{ matrix.install }}
     runs-on: ${{ matrix.os }}
-    env:
-      installer: ${{ matrix.installer }}
+    # env:
+    #   installer: ${{ matrix.installer }}
     strategy:
       fail-fast: false
       matrix:
