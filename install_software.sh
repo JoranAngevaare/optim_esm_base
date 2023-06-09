@@ -86,7 +86,7 @@ else
     cat conda_requirements.txt | grep -v "somethingsomething" >> tmp.txt
 fi
 
-if installer == 'conda';
+if $installer == 'conda';
 then
     conda install  -c conda-forge --file tmp.txt --yes -q
 else
