@@ -9,7 +9,8 @@ def test_simple():
     import numpy
 
 
-def test_all(excluded=(
+def test_all(
+    excluded=(
         'gitpython',
         'ipython',
         'ipython-genutils',
@@ -26,17 +27,28 @@ def test_all(excluded=(
         'pyshp',
         'nc-time-axis',
         'texlive-core',
-)):
+    )
+):
     this_file_loc = pathlib.Path(__file__).parent.resolve()
-    requirements_file = os.path.join(os.path.split(this_file_loc)[0], 'requirements.txt')
-    assert os.path.exists(requirements_file), f'No such file {requirements_file} (this test runs from {this_file_loc})'
+    requirements_file = os.path.join(
+        os.path.split(this_file_loc)[0], 'requirements.txt'
+    )
+    assert os.path.exists(
+        requirements_file
+    ), f'No such file {requirements_file} (this test runs from {this_file_loc})'
     missing = []
     with open(requirements_file) as requirements:
         for req in requirements.read().split('\n'):
             if req.startswith('#'):
                 continue
             # Strip any comments or == > etc signs
-            module = req.split('=')[0].split('<')[0].split('>')[0].split('#')[0].split(' ')[0]
+            module = (
+                req.split('=')[0]
+                .split('<')[0]
+                .split('>')[0]
+                .split('#')[0]
+                .split(' ')[0]
+            )
             if module == 'cdo' and os.environ.get('BASE_NO_CDO', 0):
                 print(f'Skip CDO, as it\'t not installed')
             if not module:

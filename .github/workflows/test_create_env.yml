@@ -16,14 +16,26 @@ on:
 
 jobs:
   build:
-    name: Create env (${{ matrix.python-version }}, ${{ matrix.os }}) ${{ matrix.install }}
+    name: ${{matrix.installer}} env (${{ matrix.python-version }}, ${{ matrix.os }}) ${{ matrix.install }}
     runs-on: ${{ matrix.os }}
+    env:
+      installer: ${{ matrix.installer }}
     strategy:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest", "ubuntu-20.04"]
+        installer: ['mamba', 'conda']
         python-version: ["3.8"]
         install: ['full', 'fast']
+        shouldSkipConda:
+          - ${{ github.event_name == 'pull_request'}}
+        exclude:
+          - installer: conda
+            os: ubuntu-latest
+          - installer: conda
+            install: fast
+          - installer: conda
+            shouldSkipConda: true
     defaults:
       run:
         # This is needed otherwise we can't activate the conda installation
@@ -32,6 +44,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3 
       - uses: conda-incubator/setup-miniconda@v2
+        if: matrix.installer == 'mamba'
+        with:
+            auto-update-conda: true
+            python-version: ${{ matrix.python-version }}
+            activate-environment: "synda"
+            mamba-version: "*"
+      - uses: conda-incubator/setup-miniconda@v2
+        if: matrix.installer == 'conda'
         with:
             auto-update-conda: true
             python-version: ${{ matrix.python-version }}
@@ -42,14 +62,14 @@ jobs:
           |
             conda info
             conda activate synda
-            bash install_software.sh
+            bash install_software.sh --installer $installer
       - name: run install
         if: matrix.install == 'fast'
         run:
           |
             conda info
             conda activate synda
-            bash install_software.sh --no_synda --no_cdo
+            bash install_software.sh --no_synda --no_cdo --installer $installer
       - name: run tests
         run:
           |
@@ -57,7 +77,7 @@ jobs:
           pytest test/test_imports.py
       - name: List packages
         run:
-           | 
+           |
            conda list
-           echo "Pip freze"
+           echo "Pip freeze"
            pip freeze
