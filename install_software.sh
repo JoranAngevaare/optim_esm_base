@@ -7,6 +7,7 @@ while [[ $# -gt 0 ]]; do
         --installer)
             installer="$2"
             shift 2
+            ;;
         --no_synda)
             no_synda=1
             shift
