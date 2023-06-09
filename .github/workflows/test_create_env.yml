@@ -27,11 +27,11 @@ jobs:
         installer: ['mamba', 'conda']
         python-version: ["3.8"]
         install: ['full', 'fast']
-        # exclude:
-        #   - installer: 'conda'
-        #     os: 'ubuntu-latest'
-        #   - installer: 'conda'
-        #     install: 'fast'
+        exclude:
+          - installer: 'conda'
+            os: 'ubuntu-latest'
+          - installer: 'conda'
+            install: 'fast'
     defaults:
       run:
         # This is needed otherwise we can't activate the conda installation
