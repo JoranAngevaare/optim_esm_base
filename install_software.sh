@@ -62,11 +62,11 @@ else
     else
         mkdir $synda_dir_name
     fi
-    
+
     synda_v="synda==3.35"
     announce "install $synda_v from IPSL"
     $installer install -c IPSL $synda_v  --yes -q
-    
+
     announce "set ST_HOME"
     $installer env config vars set ST_HOME=$synda_dir_name
 fi
@@ -86,7 +86,7 @@ else
     cat conda_requirements.txt | grep -v "somethingsomething" >> tmp.txt
 fi
 
-# Todo, this is akward, I think mamba does not parse --file well 
+# Todo, this is akward, I think mamba does not parse --file well
 # See https://github.com/JoranAngevaare/optim_esm_base/pull/54
 announce "install from conda forge:\n$(cat tmp.txt)"
 for dep in $(cat tmp.txt);
