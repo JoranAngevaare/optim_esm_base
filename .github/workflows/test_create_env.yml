@@ -80,7 +80,7 @@ jobs:
           pytest test/test_imports.py
       - name: List packages
         run:
-           | 
+           |
            conda list
            echo "Pip freeze"
            pip freeze
