@@ -22,13 +22,13 @@ jobs:
       installer: ${{ matrix.installer }}
     strategy:
       fail-fast: false
-      shouldSkipConda:
-        - ${{ github.event_name != 'pull_request'}}
       matrix:
         os: ["ubuntu-latest", "ubuntu-20.04"]
         installer: ['mamba', 'conda']
         python-version: ["3.8"]
         install: ['full', 'fast']
+        shouldSkipConda:
+          - ${{ github.event_name == 'pull_request'}}
         exclude:
           - installer: conda
             os: ubuntu-latest
