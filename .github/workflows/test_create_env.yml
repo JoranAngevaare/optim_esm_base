@@ -50,11 +50,11 @@ jobs:
             activate-environment: "synda"
             mamba-version: "*"
        - uses: conda-incubator/setup-miniconda@v2
-        if: matrix.installer == 'conda'
-        with:
-            auto-update-conda: true
-            python-version: ${{ matrix.python-version }}
-            activate-environment: "synda"
+         if: matrix.installer == 'conda'
+         with:
+          auto-update-conda: true
+          python-version: ${{ matrix.python-version }}
+          activate-environment: "synda"
       - name: run install
         if: matrix.install == 'full'
         run:
