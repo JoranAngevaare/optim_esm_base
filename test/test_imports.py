@@ -26,6 +26,7 @@ def test_all(
         'jupyter_server_terminals',
         'pyshp',
         'nc-time-axis',
+        'scikit-learn',
         'texlive-core',
     )
 ):
