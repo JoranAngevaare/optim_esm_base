@@ -47,3 +47,7 @@ treelib==1.6.4
 xarray==2023.1.0
 xmip==0.7.1
 xrft==1.0.1
+aiohttp  ==                         3.8.4
+gcsfs          ==                   2023.6.0
+intake-esm       ==                 2022.9.18
+requests==2.29.0
