@@ -16,30 +16,39 @@ on:
 
 jobs:
   build:
-    name: ${{matrix.installer}} env (${{ matrix.python-version }}, ${{ matrix.os }}) ${{ matrix.install }}
+    name: ${{ matrix.install }} ${{matrix.installer}}-env on (py${{ matrix.python-version }}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     env:
       installer: ${{ matrix.installer }}
     strategy:
       fail-fast: false
       matrix:
-        install: ['full', 'fast']
-        installer: ['mamba', 'conda']
-        os: ['ubuntu-latest', 'ubuntu-20.04']
+        install: [full, fast]
+        installer: [mamba, conda]
+        os: [ubuntu-latest, ubuntu-20.04]
         python-version: ['3.8', '3.9', '3.10']
         shouldSkipConda:
           - ${{ github.event_name == 'pull_request'}}
+       
         exclude:
+          # Conda takes a long time, only do it when the PR is merged
           - installer: conda
             os: ubuntu-latest
           - installer: conda
-            install: fast
-          - installer: conda
             shouldSkipConda: true
+
+          # Full install only for py3.8 because of synda requirement
           - install: full
             python-version: '3.9'
           - install: full
             python-version: '3.10'
+
+            # Py>3.8 only on ubuntu latest
+          - os: ubuntu-20.04
+            python-version: '3.9'
+          - os: ubuntu-20.04
+            python-version: '3.10'  
+
     defaults:
       run:
         # This is needed otherwise we can't activate the conda installation
