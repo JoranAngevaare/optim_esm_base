@@ -1,6 +1,6 @@
 # Test package every time
 
-name: Create env
+name: Make env
 
 # Controls when the action will run.
 
@@ -16,26 +16,39 @@ on:
 
 jobs:
   build:
-    name: ${{matrix.installer}} env (${{ matrix.python-version }}, ${{ matrix.os }}) ${{ matrix.install }}
+    name: ${{ matrix.install }} ${{matrix.installer}}-env on (py${{ matrix.python-version }}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     env:
       installer: ${{ matrix.installer }}
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-latest", "ubuntu-20.04"]
-        installer: ['mamba', 'conda']
-        python-version: ["3.8"]
-        install: ['full', 'fast']
+        install: [full, fast]
+        installer: [mamba, conda]
+        os: [ubuntu-latest, ubuntu-20.04]
+        python-version: ['3.8', '3.9', '3.10']
         shouldSkipConda:
           - ${{ github.event_name == 'pull_request'}}
+
         exclude:
+          # Conda takes a long time, only do it when the PR is merged
           - installer: conda
             os: ubuntu-latest
           - installer: conda
-            install: fast
-          - installer: conda
             shouldSkipConda: true
+
+          # Full install only for py3.8 because of synda requirement
+          - install: full
+            python-version: '3.9'
+          - install: full
+            python-version: '3.10'
+
+            # Py>3.8 only on ubuntu latest
+          - os: ubuntu-20.04
+            python-version: '3.9'
+          - os: ubuntu-20.04
+            python-version: '3.10'
+
     defaults:
       run:
         # This is needed otherwise we can't activate the conda installation
@@ -51,14 +64,14 @@ jobs:
             use-mamba: true
             auto-update-conda: true
             python-version: ${{ matrix.python-version }}
-            activate-environment: "synda"
-            mamba-version: "*"
+            activate-environment: 'synda'
+            mamba-version: '*'
       - uses: conda-incubator/setup-miniconda@v2
         if: matrix.installer == 'conda'
         with:
             auto-update-conda: true
             python-version: ${{ matrix.python-version }}
-            activate-environment: "synda"
+            activate-environment: 'synda'
       - name: run install
         if: matrix.install == 'full'
         run:
@@ -82,5 +95,5 @@ jobs:
         run:
            |
            conda list
-           echo "Pip freeze"
+           echo 'Pip freeze'
            pip freeze
