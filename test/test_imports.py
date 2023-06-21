@@ -12,6 +12,7 @@ def test_simple():
 def test_all(
     excluded=(
         'gitpython',
+        'intake-esm',
         'ipython',
         'ipython-genutils',
         'jupyter-contrib-nbextensions',
