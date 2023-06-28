@@ -2,5 +2,4 @@ cartopy==0.21.1
 cdo==2.0.3
 gh==2.25.1
 myproxy==6.2.6
-texlive-core==20230313
 xesmf==0.7.1
