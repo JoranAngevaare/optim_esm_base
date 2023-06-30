@@ -38,7 +38,7 @@ netCDF4==1.6.4
 numba==0.57.0
 numpy==1.24.3
 pandas==2.0.3
-pyproj==3.5.0
+pyproj==3.6.0
 pyshp==2.3.1
 pytest==7.4.0
 requests==2.31.0
