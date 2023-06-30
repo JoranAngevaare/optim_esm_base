@@ -39,7 +39,7 @@ jobs:
 
           # This one oddly takes a long time since #75?!
           - installer: conda
-            intall: fast
+            install: fast
 
           # Full install only for py3.8 because of synda requirement
           - install: full
