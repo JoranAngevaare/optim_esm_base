@@ -97,15 +97,15 @@ jobs:
           |
           pytest test
       - name: run optim_tools-tests
-        env:
-          OPEN_ID: ${{ secrets.OPEN_ID }}
-          OPEN_ID_KEY: ${{ secrets.OPEN_ID_KEY }}
+#         env:
+#           OPEN_ID: ${{ secrets.OPEN_ID }}
+#           OPEN_ID_KEY: ${{ secrets.OPEN_ID_KEY }}
         if: matrix.install == 'optim_tools'
         run:
             |
             git clone https://github.com/JoranAngevaare/optim_esm_tools.git ../oet
-            bash ../oet/.github/scripts/write_synda_cridentials.sh
-            bash ../oet/.github/scripts/download_example_data.sh
+            #             bash ../oet/.github/scripts/write_synda_cridentials.sh
+            #             bash ../oet/.github/scripts/download_example_data.sh
             bash ../oet/.github/scripts/install_tex.sh
             pip install -e ../oet
             pytest -v ../oet
