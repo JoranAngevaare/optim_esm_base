@@ -58,7 +58,7 @@ jobs:
             python-version: '3.10'
           - install: optim_tools
             os: ubuntu-latest
-          
+
           # TEMP
           - install: full
           - install: fast
