@@ -113,7 +113,7 @@ jobs:
         if: matrix.install == 'optim_tools'
         run:
             |
-            git clone git@github.com:JoranAngevaare/optim_esm_tools.git ../oet
+            git clone https://github.com/JoranAngevaare/optim_esm_tools.git ../oet
             bash ../oet/.github/scripts/write_synda_cridentials.sh
             bash ../oet/.github/scripts/install_tex.sh
             pip install -e ../oet
