@@ -1,5 +1,5 @@
 cartopy==0.21.1
-cdo==2.0.3
+cdo==1.6.0
 gh==2.25.1
 myproxy==6.2.6
 texlive-core==20230313
