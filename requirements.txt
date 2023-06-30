@@ -11,7 +11,7 @@ gitpython==3.1.31
 h5netcdf==1.1.0
 immutabledict==2.2.4
 intake-esm==2022.9.18
-ipython==8.12.2
+ipython==8.14.0
 ipython-genutils==0.2.0
 jupyter==1.0.0
 jupyter-console==6.6.3
