@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        install: [full, fast]
+        install: [optim_tools, full, fast]
         installer: [mamba, conda]
         os: [ubuntu-latest, ubuntu-20.04]
         python-version: ['3.8', '3.9', '3.10']
@@ -43,11 +43,21 @@ jobs:
           - install: full
             python-version: '3.10'
 
-            # Py>3.8 only on ubuntu latest
+          # Py>3.8 only on ubuntu latest
           - os: ubuntu-20.04
             python-version: '3.9'
           - os: ubuntu-20.04
             python-version: '3.10'
+
+          # Testing optim_esm_tools should be light weight
+          - install: optim_tools
+            installer: conda
+          - install: optim_tools
+            python-version: '3.9'
+          - install: optim_tools
+            python-version: '3.10'
+          - install: optim_tools
+            os: ubuntu-latest
 
     defaults:
       run:
@@ -73,24 +83,32 @@ jobs:
             python-version: ${{ matrix.python-version }}
             activate-environment: 'synda'
       - name: run install
-        if: matrix.install == 'full'
+        if: matrix.install == 'full' || matrix.install == 'optim_tools'
         run:
           |
-            conda info
-            conda activate synda
             bash install_software.sh --installer $installer
       - name: run install
         if: matrix.install == 'fast'
         run:
           |
-            conda info
-            conda activate synda
             bash install_software.sh --no_synda --no_cdo --installer $installer
       - name: run tests
         run:
           |
-          conda activate synda
-          pytest test/test_imports.py
+          pytest test
+      - name: run optim_tools-tests
+        env:
+          OPEN_ID: ${{ secrets.OPEN_ID }}
+          OPEN_ID_KEY: ${{ secrets.OPEN_ID_KEY }}
+        if: matrix.install == 'optim_tools'
+        run:
+            |
+            git clone https://github.com/JoranAngevaare/optim_esm_tools.git ../oet
+            bash ../oet/.github/scripts/write_synda_cridentials.sh
+            bash ../oet/.github/scripts/download_example_data.sh
+            bash ../oet/.github/scripts/install_tex.sh
+            pip install -e ../oet
+            pytest -v ../oet
       - name: List packages
         run:
            |
