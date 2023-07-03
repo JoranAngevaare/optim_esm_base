@@ -38,7 +38,7 @@ netCDF4==1.6.4
 numba==0.57.1
 numpy==1.24.4
 pandas==2.0.3
-pydantic=v1.10.10    # https://github.com/intake/intake-esm/issues/617
+pydantic==1.10.10    # https://github.com/intake/intake-esm/issues/617
 pyproj==3.5.0
 pyshp==2.3.1
 pytest==7.4.0
