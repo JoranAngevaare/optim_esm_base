@@ -40,6 +40,7 @@ numpy==1.24.4
 pandas==2.0.3
 pyproj==3.5.0
 pyshp==2.3.1
+pydantic=v1.10.10    # https://github.com/intake/intake-esm/issues/617
 pytest==7.4.0
 requests==2.31.0
 ruptures==1.1.7
