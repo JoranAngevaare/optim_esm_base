@@ -31,7 +31,7 @@ jupyterlab-widgets==3.0.8
 latex==0.7.0
 matplotlib==3.7.2
 memory_profiler==0.61.0
-mistune==2.0.5
+mistune==3.0.1
 nc-time-axis==1.4.1
 # myproxy
 netCDF4==1.6.4
