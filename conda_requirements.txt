@@ -2,5 +2,3 @@
 cartopy==0.21.0
 cdo==2.0.3
 gh==2.25.1
-myproxy==6.2.6
-xesmf==0.7.1
