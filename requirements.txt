@@ -7,7 +7,7 @@ dask==2023.5.0
 diptest==0.5.2
 gcsfs==2023.6.0
 geopy==2.3.0
-gitpython==3.1.31
+gitpython==3.1.32
 h5netcdf==1.1.0
 hypothesis==6.80.1
 immutabledict==3.0.0
