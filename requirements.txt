@@ -1,9 +1,9 @@
 aiohttp==3.8.5
+cartopy==0.22.0
 cdo==1.5.7
 cftime==1.6.2
 coverage==6.5.0
 coveralls==3.3.1
-cartopy==0.22.0
 dask==2023.5.0
 diptest==0.5.2
 gcsfs==2023.6.0
