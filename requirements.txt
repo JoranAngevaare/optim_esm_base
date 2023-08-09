@@ -40,12 +40,12 @@ netCDF4==1.6.4
 numba==0.57.1
 numpy==1.24.4
 pandas==2.0.3
-pydantic==1.10.10    # https://github.com/intake/intake-esm/issues/617
+pydantic==1.10.12    # https://github.com/intake/intake-esm/issues/617
 pyproj==3.5.0
 pyshp==2.3.1
 pytest==7.4.0
 requests==2.31.0
-rpy2==3.5.11
+rpy2==3.5.13
 rpy_symmetry==0.0.1
 ruptures==1.1.8
 scikit-learn==1.3.0
