@@ -112,7 +112,7 @@ jobs:
             #             bash ../oet/.github/scripts/download_example_data.sh
             bash ../oet/.github/scripts/install_tex.sh
             pip install -e ../oet
-            pytest -v ../oet
+            pytest -vx ../oet
       - name: List packages
         run:
            |
