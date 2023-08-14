@@ -30,7 +30,7 @@ jobs:
         # shouldSkipConda:
           # - ${{ github.event_name == 'pull_request'}}
 
-        exclude:
+        # exclude:
           # # Conda takes a long time, only do it when the PR is merged
           # - installer: conda
           #   os: ubuntu-latest
