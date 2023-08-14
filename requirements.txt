@@ -9,7 +9,7 @@ gcsfs==2023.6.0
 geopy==2.3.0
 gitpython==3.1.32
 h5netcdf==1.1.0
-hypothesis==6.82.3
+hypothesis==6.82.4
 immutabledict==3.0.0
 intake-esm==2022.9.18
 ipython==8.12.2
