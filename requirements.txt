@@ -3,6 +3,7 @@ cdo==1.5.7
 cftime==1.6.2
 coverage==6.5.0
 coveralls==3.3.1
+cartopy==0.22.0; python_version>="3.9"
 dask==2023.5.0
 diptest==0.5.2
 gcsfs==2023.6.0

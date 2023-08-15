@@ -1,1 +1,1 @@
-synda
+synda==3.35
