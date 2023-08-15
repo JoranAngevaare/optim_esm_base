@@ -63,9 +63,8 @@ else
         mkdir $synda_dir_name
     fi
 
-    synda_v="synda==3.35"
-    announce "install $synda_v from IPSL"
-    $installer install -c IPSL $synda_v  --yes -q
+    announce "install synda from IPSL"
+    $installer install -c IPSL --file synda_version.txt --yes -q
 
     announce "set ST_HOME"
     $installer env config vars set ST_HOME=$synda_dir_name
