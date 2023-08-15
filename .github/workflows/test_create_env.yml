@@ -77,6 +77,7 @@ jobs:
       - name: temp del cartopy from conda
         if: (matrix.install == 'full' || matrix.install == 'optim_tools') && matrix.python-version != '3.8'
         run:
+          |
           cat conda_requirements.txt | grep -v "cartopy" >> tmp.txt
           mv tmp.txt conda_requirements.txt
       - name: run install
