@@ -29,7 +29,7 @@ decorator==5.1.1
 defusedxml==0.7.1
 diptest==0.5.2
 distributed==2023.8.0; python_version>="3.9"
-distributed==2023.5.0; python_version=="3.8"
+distributed==2023.8.0; python_version=="3.8"
 docopt==0.6.2
 entrypoints==0.4
 executing==1.2.0
