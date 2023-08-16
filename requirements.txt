@@ -22,14 +22,14 @@ cloudpickle==2.2.1
 comm==0.1.4
 coverage==6.5.0
 coveralls==3.3.1
-dask==2023.8.0; python_version>="3.9"
-dask==2023.5.0; python_version=="3.8"
+dask  # managed by distributed
 data==0.4
 debugpy==1.6.7.post1
 decorator==5.1.1
 defusedxml==0.7.1
 diptest==0.5.2
-distributed==2023.5.0
+distributed==2023.8.0; python_version>="3.9"
+distributed==2023.5.0; python_version=="3.8"
 docopt==0.6.2
 entrypoints==0.4
 executing==1.2.0
