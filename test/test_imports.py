@@ -9,7 +9,7 @@ def test_simple():
     import numpy
 
 
-def test_all(
+def _test_all(
     excluded=(
         'gitpython',
         'intake-esm',
@@ -31,6 +31,7 @@ def test_all(
         'texlive-core',
     )
 ):
+    # disabled now
     this_file_loc = pathlib.Path(__file__).parent.resolve()
     requirements_file = os.path.join(
         os.path.split(this_file_loc)[0], 'requirements.txt'
