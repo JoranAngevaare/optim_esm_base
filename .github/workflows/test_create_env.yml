@@ -56,8 +56,6 @@ jobs:
           # Testing optim_esm_tools should be light weight
           - install: optim_tools
             installer: conda
-          - install: optim_tools
-            os: ubuntu-latest
 
     defaults:
       run:
