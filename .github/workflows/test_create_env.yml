@@ -57,10 +57,6 @@ jobs:
           - install: optim_tools
             installer: conda
           - install: optim_tools
-            python-version: '3.9'
-          - install: optim_tools
-            python-version: '3.10'
-          - install: optim_tools
             os: ubuntu-latest
 
     defaults:
