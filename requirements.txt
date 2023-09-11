@@ -62,7 +62,7 @@ immutabledict==3.0.0
 importlib-metadata==6.8.0
 intake==0.7.0
 intake-esm==2022.9.18
-ipykernel==6.25.1
+ipykernel==6.25.2
 ipython==8.15.0; python_version>="3.9"
 ipython==8.13.0; python_version=="3.8"
 ipython-genutils==0.2.0
