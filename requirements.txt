@@ -117,7 +117,7 @@ numcodecs==0.11.0
 numpy==1.24.4
 oauthlib==3.2.2
 pandas==2.1.0; python_version>="3.9"
-pandas==2.0.3; python_version=="3.8"
+pandas==2.1.0; python_version=="3.8"
 pandocfilters==1.5.0
 parso==0.8.3
 partd==1.4.0
