@@ -180,7 +180,7 @@ wcwidth==0.2.6
 webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.6.3
-widgetsnbextension==4.0.8
+widgetsnbextension==4.0.9
 xarray==2023.8.0; python_version>="3.9"
 xarray==2023.1.0; python_version=="3.8"
 xyzservices==2023.7.0
