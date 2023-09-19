@@ -39,7 +39,7 @@ fastjsonschema==2.18.0
 fastprogress==1.0.3
 fqdn==1.5.1
 frozenlist==1.4.0
-fsspec==2023.9.0
+fsspec==2023.9.1
 funcsigs==1.0.2
 future==0.18.3
 gcsfs==2023.9.0
