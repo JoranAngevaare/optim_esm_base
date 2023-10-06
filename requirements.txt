@@ -34,7 +34,7 @@ distributed==2023.5.0; python_version=="3.8"
 docopt==0.6.2
 entrypoints==0.4
 executing==1.2.0
-fasteners==0.18
+fasteners==0.19
 fastjsonschema==2.18.0
 fastprogress==1.0.3
 fqdn==1.5.1
