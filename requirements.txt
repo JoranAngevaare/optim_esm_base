@@ -112,7 +112,7 @@ nest-asyncio==1.5.8
 netCDF4==1.6.4
 notebook==6.5.4
 notebook_shim==0.2.3
-numba==0.57.1
+numba==0.58.0
 numcodecs==0.11.0
 numpy==1.24.4
 oauthlib==3.2.2
