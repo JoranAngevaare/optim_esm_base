@@ -19,7 +19,7 @@ cdo==1.5.7
 certifi==2023.7.22
 cftime==1.6.2
 click==8.1.7
-cloudpickle==2.2.1
+cloudpickle==3.0.0
 comm==0.1.4
 coverage==6.5.0
 coveralls==3.3.1
