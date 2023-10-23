@@ -132,7 +132,7 @@ pure-eval==0.2.2
 pyarrow==12.0.1
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
-pycairo==1.25.0
+pycairo==1.25.1
 pydantic==1.10.13    # https://github.com/intake/intake-esm/issues/617
 Pygments==2.16.1
 pyproj==3.5.0
