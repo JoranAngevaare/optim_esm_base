@@ -113,7 +113,7 @@ netCDF4==1.6.4
 notebook==6.5.4
 notebook_shim==0.2.3
 numba==0.57.1
-numcodecs==0.12.0
+numcodecs==0.12.1
 numpy==1.24.4
 oauthlib==3.2.2
 pandas==2.1.0; python_version>="3.9"
