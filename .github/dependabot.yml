@@ -15,6 +15,7 @@ updates:
       interval: "daily"
     open-pull-requests-limit: 50
     ignore:
+      - dependency-name: "ipywidgets"
       - dependency-name: "ipykernel"
       - dependency-name: "ipython"
       - dependency-name: "ipython-genutils"
