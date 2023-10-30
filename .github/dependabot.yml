@@ -7,7 +7,25 @@ updates:
       # Check for updates to GitHub Actions every weekday
       interval: "weekly"
       time: "12:00"
-    # Raise all npm pull requests with an assignee
+      ignore:
+      - dependency-name: "ipykernel"
+      - dependency-name: "ipython"
+      - dependency-name: "ipython-genutils"
+      - dependency-name: "jupyter"
+      - dependency-name: "jupyter-console"
+      - dependency-name: "jupyter-contrib-core"
+      - dependency-name: "jupyter-contrib-nbextensions"
+      - dependency-name: "jupyter-events"
+      - dependency-name: "jupyter-highlight-selected-word"
+      - dependency-name: "jupyter-nbextensions-configurator"
+      - dependency-name: "jupyter-resource-usage"
+      - dependency-name: "jupyter-server"
+      - dependency-name: "jupyter_client"
+      - dependency-name: "jupyter_core"
+      - dependency-name: "jupyter_server_terminals"
+      - dependency-name: "jupyterlab-pygments"
+      - dependency-name: "jupyterlab-widgets"
+      - dependency-name: "tornado"
     assignees:
       - JoranAngevaare
   - package-ecosystem: pip
