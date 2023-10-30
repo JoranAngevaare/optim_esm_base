@@ -38,6 +38,14 @@ updates:
         patterns:
           - "gcsfs"
           - "fsspec"
+      numba:
+        patterns:
+          - "numba"
+          - "llvmlite"
+      dask:
+        patterns:
+          - "dask"
+          - "distributed"
       patches:
         update-types:
           - "patch"
