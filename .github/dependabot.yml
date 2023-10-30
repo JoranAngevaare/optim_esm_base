@@ -12,8 +12,8 @@ updates:
   - package-ecosystem: pip
     directory: "/"
     schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 10
+      interval: "daily"
+    open-pull-requests-limit: 50
     ignore:
       - dependency-name: "ipykernel"
       - dependency-name: "ipython"
@@ -33,3 +33,11 @@ updates:
       - dependency-name: "jupyterlab-pygments"
       - dependency-name: "jupyterlab-widgets"
       - dependency-name: "tornado"
+     groups:
+       fs-deps:
+         pattern:
+           - "gcsfs"
+           - "fsspec"
+      patches:
+        update-types:
+          - "patch"
