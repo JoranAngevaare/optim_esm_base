@@ -35,9 +35,9 @@ updates:
       - dependency-name: "tornado"
      groups:
        fs-deps:
-         pattern:
+         patterns:
            - "gcsfs"
            - "fsspec"
-      patches:
-        update-types:
-          - "patch"
+       patches:
+         update-types:
+           - "patch"
