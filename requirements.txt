@@ -107,7 +107,7 @@ jupyterlab-pygments==0.2.2; python_version=="3.8"
 jupyterlab-widgets; python_version>="3.9"
 jupyterlab-widgets==3.0.8; python_version=="3.8"
 latex==0.7.0
-llvmlite==0.40.1
+llvmlite==0.41.1
 locket==1.0.0
 lockfile==0.12.2
 lxml==4.9.3
@@ -129,7 +129,7 @@ nest-asyncio==1.5.8
 netCDF4==1.6.4
 notebook==6.5.4
 notebook_shim==0.2.3
-numba==0.57.1
+numba==0.58.1
 numcodecs==0.12.1
 numpy==1.24.4
 oauthlib==3.2.2
