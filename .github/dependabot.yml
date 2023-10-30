@@ -33,11 +33,11 @@ updates:
       - dependency-name: "jupyterlab-pygments"
       - dependency-name: "jupyterlab-widgets"
       - dependency-name: "tornado"
-     groups:
-       fs-deps:
-         patterns:
-           - "gcsfs"
-           - "fsspec"
-       patches:
-         update-types:
-           - "patch"
+    groups:
+      fs-deps:
+        patterns:
+          - "gcsfs"
+          - "fsspec"
+      patches:
+        update-types:
+          - "patch"
