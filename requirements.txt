@@ -61,7 +61,8 @@ hypothesis==6.88.1
 immutabledict==3.0.0
 importlib-metadata==6.8.0
 intake==0.7.0
-intake-esm==2023.10.27
+intake-esm==2023.10.27; python_version>="3.9"
+intake-esm==2022.9.18; python_version=="3.8"
 ipykernel; python_version>="3.9"
 ipykernel==6.25.2; python_version=="3.8"
 ipython==8.16.1; python_version>="3.9"
@@ -150,6 +151,8 @@ pyasn1==0.5.0
 pyasn1-modules==0.3.0
 pycairo==1.25.0
 pydantic==2.4.2
+pydantic==2.4.2; python_version>="3.9"
+pydantic==1.10.13; python_version=="3.8"
 Pygments==2.16.1
 pyproj==3.5.0
 pyshp==2.3.1
