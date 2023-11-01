@@ -12,7 +12,7 @@ updates:
   - package-ecosystem: pip
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     open-pull-requests-limit: 50
     ignore:
       - dependency-name: "ipywidgets"
