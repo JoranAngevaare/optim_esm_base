@@ -183,7 +183,7 @@ sortedcontainers==2.4.0
 stack-data==0.6.3
 tblib==3.0.0
 tempdir==0.7.1
-terminado==0.17.1
+terminado==0.18.0
 threadpoolctl==3.2.0
 tinycss2==1.2.1
 toolz==0.12.0
