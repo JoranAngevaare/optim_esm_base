@@ -35,7 +35,7 @@ docopt==0.6.2
 entrypoints==0.4
 executing==2.0.1
 fasteners==0.19
-fastjsonschema==2.18.1
+fastjsonschema==2.19.0
 fastprogress==1.0.3
 fqdn==1.5.1
 frozenlist==1.4.0
