@@ -34,6 +34,7 @@ updates:
       - dependency-name: "jupyterlab-pygments"
       - dependency-name: "jupyterlab-widgets"
       - dependency-name: "tornado"
+      - dependency-name: "anyio"
     groups:
       fs-deps:
         patterns:
