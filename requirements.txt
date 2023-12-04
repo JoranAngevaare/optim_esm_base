@@ -39,10 +39,10 @@ fastjsonschema==2.19.0
 fastprogress==1.0.3
 fqdn==1.5.1
 frozenlist==1.4.0
-fsspec==2023.10.0
+fsspec==2023.12.0
 funcsigs==1.0.2
 future==0.18.3
-gcsfs==2023.10.0
+gcsfs==2023.12.0
 geographiclib==2.0
 geopy==2.4.1
 gitdb==4.0.11
