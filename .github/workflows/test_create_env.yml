@@ -64,7 +64,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: conda-incubator/setup-miniconda@v3
         if: matrix.installer == 'mamba'
         with:
             miniforge-variant: Mambaforge
@@ -74,7 +74,7 @@ jobs:
             python-version: ${{ matrix.python-version }}
             activate-environment: 'synda'
             mamba-version: '*'
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: conda-incubator/setup-miniconda@v3
         if: matrix.installer == 'conda'
         with:
             auto-update-conda: true
