@@ -131,7 +131,8 @@ notebook==6.5.4
 notebook_shim==0.2.3
 numba==0.58.1
 numcodecs==0.12.1
-numpy==1.24.4
+numpy==1.26.3; python_version>="3.9"
+numpy==1.24.4; python_version=="3.8"
 oauthlib==3.2.2
 pandas==2.1.0; python_version>="3.9"
 pandas==2.0.3; python_version=="3.8"
