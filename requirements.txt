@@ -125,7 +125,7 @@ nbclient==0.9.0
 nbconvert==7.14.0
 nbformat==5.9.2
 nc-time-axis==1.4.1
-nest-asyncio==1.5.8
+nest-asyncio==1.6.0
 netCDF4==1.6.5
 notebook==6.5.4
 notebook_shim==0.2.4
