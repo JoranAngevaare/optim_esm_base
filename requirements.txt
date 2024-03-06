@@ -41,7 +41,7 @@ fqdn==1.5.1
 frozenlist==1.4.1
 fsspec==2023.12.2
 funcsigs==1.0.2
-future==0.18.3
+future==1.0.0
 gcsfs==2023.12.2.post1
 geographiclib==2.0
 geopy==2.4.1
