@@ -57,7 +57,7 @@ google-resumable-media==2.7.0
 googleapis-common-protos==1.62.0
 h5netcdf==1.1.0
 h5py==3.10.0
-hypothesis==6.93.1
+hypothesis==6.99.2
 immutabledict==4.1.0
 importlib-metadata==7.0.2
 intake==2.0.3
