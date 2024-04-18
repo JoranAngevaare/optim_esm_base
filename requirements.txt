@@ -58,7 +58,7 @@ googleapis-common-protos==1.63.0
 h5netcdf==1.1.0
 h5py==3.10.0
 hypothesis==6.99.8
-immutabledict==4.1.0
+immutabledict==4.2.0
 importlib-metadata==7.0.2
 intake==2.0.4
 intake-esm==2023.10.27; python_version>="3.9"
