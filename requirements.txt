@@ -200,7 +200,7 @@ urllib3==2.2.1
 wcwidth==0.2.13
 webcolors==1.13
 webencodings==0.5.1
-websocket-client==1.7.0
+websocket-client==1.8.0
 widgetsnbextension==4.0.10
 xarray==2023.8.0; python_version>="3.9"  # upgrading to 2023.09 breaks derivative calculation in xarray
 xarray==2023.1.0; python_version=="3.8"
