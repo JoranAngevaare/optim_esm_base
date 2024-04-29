@@ -57,10 +57,10 @@ google-resumable-media==2.7.0
 googleapis-common-protos==1.63.0
 h5netcdf==1.1.0
 h5py==3.11.0
-hypothesis==6.100.1
+hypothesis==6.100.2
 immutabledict==4.2.0
 importlib-metadata==7.1.0
-intake==2.0.4
+intake==2.0.5
 intake-esm==2023.10.27; python_version>="3.9"
 intake-esm==2022.9.18; python_version=="3.8"
 ipykernel; python_version>="3.9"
