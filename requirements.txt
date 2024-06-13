@@ -22,7 +22,7 @@ click==8.1.7
 cloudpickle==3.0.0
 comm==0.2.2
 coverage==6.5.0
-coveralls==3.3.1
+coveralls==4.0.0
 dask  # managed by distributed
 data==0.4
 debugpy==1.8.1
