@@ -17,7 +17,7 @@ bokeh==3.1.1; python_version=="3.8"
 cachetools==5.3.3
 cdo==1.5.7
 certifi==2024.2.2
-cftime==1.6.3
+cftime==1.6.4
 click==8.1.7
 cloudpickle==3.0.0
 comm==0.2.2
@@ -53,8 +53,8 @@ google-auth-oauthlib==1.2.0
 google-cloud-core==2.4.1
 google-cloud-storage==2.16.0
 google-crc32c==1.5.0
-google-resumable-media==2.7.0
-googleapis-common-protos==1.63.0
+google-resumable-media==2.7.1
+googleapis-common-protos==1.63.1
 h5netcdf==1.1.0
 h5py==3.11.0
 hypothesis==6.100.2
@@ -72,7 +72,7 @@ ipywidgets==8.1.0
 isoduration==20.11.0
 jedi==0.19.1
 Jinja2==3.1.4
-joblib==1.4.0
+joblib==1.4.2
 jsonpointer==2.4
 jsonschema==4.21.1
 jsonschema-specifications==2023.12.1
@@ -110,7 +110,7 @@ latex==0.7.0
 llvmlite==0.41.1
 locket==1.0.0
 lockfile==0.12.2
-lxml==5.2.1
+lxml==5.2.2
 lz4==4.3.3
 MarkupSafe==2.1.5
 matplotlib==3.7.3
@@ -122,7 +122,7 @@ multidict==6.0.5
 munkres==1.1.4
 nbclassic==1.0.0
 nbclient==0.10.0
-nbconvert==7.16.3
+nbconvert==7.16.4
 nbformat==5.10.4
 nc-time-axis==1.4.1
 nest-asyncio==1.6.0
@@ -138,12 +138,12 @@ pandas==2.1.0; python_version>="3.9"
 pandas==2.0.3; python_version=="3.8"
 pandocfilters==1.5.1
 parso==0.8.4
-partd==1.4.1
+partd==1.4.2
 pexpect==4.9.0
 pickleshare==0.7.5
 pkgutil_resolve_name==1.3.10
 prometheus-client==0.20.0
-prompt-toolkit==3.0.43
+prompt-toolkit==3.0.47
 protobuf==4.25.3
 ptyprocess==0.7.0
 pure-eval==0.2.2
@@ -152,25 +152,25 @@ pyasn1==0.5.1
 pyasn1-modules==0.4.0
 pycairo==1.25.0
 pydantic==2.4.2; python_version>="3.9"
-pydantic==1.10.15; python_version=="3.8"
+pydantic==1.10.16; python_version=="3.8"
 Pygments==2.18.0
 pyproj==3.5.0
 pyshp==2.3.1
-pytest==8.2.0
+pytest==8.2.2
 python-json-logger==2.0.7
 PyYAML==6.0.1
-pyzmq==26.0.2
-qtconsole==5.5.1
+pyzmq==26.0.3
+qtconsole==5.5.2
 QtPy==2.4.1
-referencing==0.35.0
+referencing==0.35.1
 regionmask==0.11.0
 reportlab==4.2.0
-requests==2.32.0
+requests==2.32.3
 requests-oauthlib==2.0.0
 retrying==1.3.4
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
-rpds-py==0.18.0
+rpds-py==0.18.1
 rpy-symmetry==0.2.0
 rpy2==3.5.16
 rsa==4.9
@@ -191,7 +191,7 @@ tinycss2==1.3.0
 toolz==0.12.1
 tornado; python_version>="3.9"
 tornado==6.3.3; python_version=="3.8"
-tqdm==4.66.2
+tqdm==4.66.4
 traitlets==5.14.3
 treelib==1.7.0
 tzlocal==5.2
@@ -201,7 +201,7 @@ wcwidth==0.2.13
 webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.8.0
-widgetsnbextension==4.0.10
+widgetsnbextension==4.0.11
 xarray==2023.8.0; python_version>="3.9"  # upgrading to 2023.09 breaks derivative calculation in xarray
 xarray==2023.1.0; python_version=="3.8"
 xyzservices==2024.4.0
