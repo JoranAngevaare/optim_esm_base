@@ -127,7 +127,7 @@ nbformat==5.10.4
 nc-time-axis==1.4.1
 nest-asyncio==1.6.0
 netCDF4==1.6.5
-notebook==6.5.4
+notebook==7.2.1
 notebook_shim==0.2.4
 numba==0.58.1
 numcodecs==0.12.1
