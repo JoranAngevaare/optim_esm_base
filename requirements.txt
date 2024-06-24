@@ -59,7 +59,7 @@ h5netcdf==1.1.0
 h5py==3.11.0
 hypothesis==6.103.2
 immutabledict==4.2.0
-importlib-metadata==7.1.0
+importlib-metadata==7.2.1
 intake==2.0.5
 intake-esm==2023.10.27; python_version>="3.9"
 intake-esm==2022.9.18; python_version=="3.8"
