@@ -1,5 +1,6 @@
 # DO NOT UPGRADE cartopy! 0.21.1 creates a massively convoluted segmentation fault in py3.8
 cartopy==0.21.0
+shapely==1.8.5
 cdo==2.0.3
 gh==2.25.1
 r-base==4.2.3
