@@ -34,8 +34,8 @@ jobs:
           # Conda takes a long time, only do it when the PR is merged
           - installer: conda
             os: ubuntu-latest
-          - installer: conda
-            shouldSkipConda: true
+          # - installer: conda
+            # shouldSkipConda: true
 
           # This one oddly takes a long time since #75?!
           - installer: conda
