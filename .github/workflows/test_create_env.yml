@@ -106,6 +106,7 @@ jobs:
             #             bash ../oet/.github/scripts/download_example_data.sh
             bash ../oet/.github/scripts/install_tex.sh
             pip install -e ../oet
+            python -c "import optim_esm_tools as oet; oet.utils.print_versions(); print('import cartopy'); import cartopy; print('setup map'); oet.plotting.plot.setup_map(); print('done'); oet.utils.print_versions('shapely cartopy urllib'.split())"
             pytest -vx ../oet
       - name: List packages
         run:
