@@ -47,15 +47,15 @@ jobs:
           - install: full
             python-version: '3.10'
 
-          # Py>3.8 only on ubuntu latest
-          - os: ubuntu-20.04
-            python-version: '3.9'
-          - os: ubuntu-20.04
-            python-version: '3.10'
+          # # Py>3.8 only on ubuntu latest
+          # - os: ubuntu-20.04
+          #   python-version: '3.9'
+          # - os: ubuntu-20.04
+          #   python-version: '3.10'
 
-          # Testing optim_esm_tools should be light weight
-          - install: optim_tools
-            installer: conda
+          # # Testing optim_esm_tools should be light weight
+          # - install: optim_tools
+          #   installer: conda
 
     defaults:
       run:
