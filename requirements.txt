@@ -126,7 +126,7 @@ nbconvert==7.16.4
 nbformat==5.10.4
 nc-time-axis==1.4.1
 nest-asyncio==1.6.0
-netCDF4==1.6.5
+netCDF4==1.7.1.post2
 notebook==6.5.4
 notebook_shim==0.2.4
 numba==0.58.1
