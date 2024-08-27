@@ -1,7 +1,6 @@
 # optim_esm_base
 Base for OptimESM software
 
-
 # Full Installation (on linux)
 
 ```bash
@@ -18,7 +17,7 @@ pytest test
 
 bash set_jupy.sh
 ```
-This package is the base 
+This package is the base for `optim_esm_tools` so we also include how to install that
 ```
 ## Optional optim_esm_tools
 git clone https://github.com/JoranAngevaare/optim_esm_tools.git ../oet
