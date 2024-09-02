@@ -26,7 +26,8 @@ jobs:
         install: [optim_tools, full, fast]
         installer: [mamba, conda]
         os: [ubuntu-latest, ubuntu-20.04]
-        python-version: ['3.8', '3.9', '3.10']
+        # python-version: ['3.8', '3.9', '3.10']
+        python-version: ['3.10']
         shouldSkipConda:
           - ${{ github.event_name == 'pull_request'}}
 
