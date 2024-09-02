@@ -141,7 +141,8 @@ numpy==2.0.0; python_version>="3.10"
 numpy==1.26.3; python_version=="3.9"
 numpy==1.24.4; python_version=="3.8"
 oauthlib==3.2.2
-pandas==2.0.3; python_version>="3.9"
+pandas==2.2.2; python_version>="3.10"
+pandas==2.0.3; python_version=="3.9"
 pandas==2.0.3; python_version=="3.8"
 pandocfilters==1.5.1
 parso==0.8.4
