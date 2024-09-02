@@ -137,7 +137,7 @@ numba==0.60.0; python_version>="3.10"
 numba==0.59.1; python_version=="3.9"
 numba==0.58.1; python_version=="3.8"
 numcodecs==0.12.1
-numpy==2.1.0; python_version>="3.10"
+numpy==2.0.0; python_version>="3.10"
 numpy==1.26.3; python_version=="3.9"
 numpy==1.24.4; python_version=="3.8"
 oauthlib==3.2.2
