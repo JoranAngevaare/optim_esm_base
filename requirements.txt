@@ -37,7 +37,7 @@ executing==2.0.1
 fasteners==0.19
 fastjsonschema==2.20.0
 fastprogress==1.0.3
-fiona==1.9.6
+fiona==1.10.1
 fqdn==1.5.1
 frozenlist==1.4.1
 fsspec==2024.6.1
