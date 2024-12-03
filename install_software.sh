@@ -40,11 +40,7 @@ set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 installer="${installer:-"mamba"}"
 synda_dir_name="${synda_dir:-"$(pwd)/synda"}"
 
-if [[ $installer == "miniforge" ]];
-then
-    announce "using miniforge (subcommands are calling \"conda\")"
-    installer="conda"
-fi
+
 
 echo "args are" synda_dir:$synda_dir_name no_synda:$no_synda no_cdo:$no_cdo installer:$installer
 
@@ -55,6 +51,12 @@ function announce {
     printf "## $1\n"
     echo
 }
+
+if [[ $installer == "miniforge" ]];
+then
+    announce "using miniforge (subcommands are calling \"conda\")"
+    installer="conda"
+fi
 
 if [[ $no_synda == 1 ]];
 then
