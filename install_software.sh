@@ -52,13 +52,15 @@ function announce {
     echo
 }
 
+# This is a bit convoluted, but we call "conda" for miniforge installations. Nevertheless, we need to keep
+# track of that we are doing a miniforge build since miniforge (at 2024/12/03) doesn't parse the --file option
+# well so we need a trick (see comment below).
 method=$installer
 if [[ $installer == "miniforge" ]];
 then
-    announce "using miniforge (subcommands are calling \"conda\")"
+    announce "using $installer (subcommands are calling \"conda\")"
     installer="conda"
 fi
-announce "using installler $installer and method $method"
 
 
 if [[ $no_synda == 1 ]];
@@ -101,7 +103,7 @@ then
     announce "install from conda forge:\n$(cat tmp.txt)"
     conda install  -c conda-forge --file tmp.txt --yes -q
 else
-    # Todo, this is akward, I think mamba does not parse --file well
+    # Todo, this is akward, I think mamba/miniforge does not parse --file well
     # See https://github.com/JoranAngevaare/optim_esm_base/pull/54
     announce "install from conda forge:\n$(cat tmp.txt)"
     for dep in $(cat tmp.txt);
