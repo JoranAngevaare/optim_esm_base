@@ -52,11 +52,14 @@ function announce {
     echo
 }
 
+method=$installer
 if [[ $installer == "miniforge" ]];
 then
     announce "using miniforge (subcommands are calling \"conda\")"
     installer="conda"
 fi
+announce "using installler $installer and method $method"
+
 
 if [[ $no_synda == 1 ]];
 then
@@ -93,7 +96,7 @@ else
     cat conda_requirements.txt | grep -v "#" | grep -v "somethingsomething" &> tmp.txt
 fi
 
-if [[ "$installer" == 'conda' ]];
+if [[ "$method" == 'conda' ]];
 then
     announce "install from conda forge:\n$(cat tmp.txt)"
     conda install  -c conda-forge --file tmp.txt --yes -q
