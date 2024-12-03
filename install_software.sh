@@ -37,7 +37,7 @@ done
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
 
-installer="${installer:-"mamba"}"
+installer="${installer:-"miniforge"}"
 synda_dir_name="${synda_dir:-"$(pwd)/synda"}"
 
 
