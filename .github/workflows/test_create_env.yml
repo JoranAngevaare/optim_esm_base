@@ -24,7 +24,8 @@ jobs:
       fail-fast: false
       matrix:
         install: [optim_tools, fast]
-        installer: [mamba, miniforge, conda]
+        # installer: [mamba, miniforge, conda]
+        installer: [miniforge]
         os: [ubuntu-latest, ubuntu-20.04]
         python-version: ['3.8', '3.9', '3.10']
         shouldSkipConda:
