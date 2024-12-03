@@ -37,8 +37,10 @@ done
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
 
-installer="${installer:-"mamba"}"
+installer="${installer:-"miniforge"}"
 synda_dir_name="${synda_dir:-"$(pwd)/synda"}"
+
+
 
 echo "args are" synda_dir:$synda_dir_name no_synda:$no_synda no_cdo:$no_cdo installer:$installer
 
@@ -49,6 +51,17 @@ function announce {
     printf "## $1\n"
     echo
 }
+
+# This is a bit convoluted, but we call "conda" for miniforge installations. Nevertheless, we need to keep
+# track of that we are doing a miniforge build since miniforge (at 2024/12/03) doesn't parse the --file option
+# well so we need a trick (see comment below).
+method=$installer
+if [[ $installer == "miniforge" ]];
+then
+    announce "using $installer (subcommands are calling \"conda\")"
+    installer="conda"
+fi
+
 
 if [[ $no_synda == 1 ]];
 then
@@ -79,18 +92,18 @@ fi
 if [[ $no_cdo == 1 ]];
 then
     echo "Skip CDO install"
-    cat conda_requirements.txt | grep -v "#" | grep -v cdo >> tmp.txt
+    cat conda_requirements.txt | grep -v "#" | grep -v cdo &> tmp.txt
     $installer env config vars set BASE_NO_CDO=1
 else
-    cat conda_requirements.txt | grep -v "#" | grep -v "somethingsomething" >> tmp.txt
+    cat conda_requirements.txt | grep -v "#" | grep -v "somethingsomething" &> tmp.txt
 fi
 
-if [[ "$installer" == 'conda' ]];
+if [[ "$method" == 'conda' ]];
 then
     announce "install from conda forge:\n$(cat tmp.txt)"
     conda install  -c conda-forge --file tmp.txt --yes -q
 else
-    # Todo, this is akward, I think mamba does not parse --file well
+    # Todo, this is akward, I think mamba/miniforge does not parse --file well
     # See https://github.com/JoranAngevaare/optim_esm_base/pull/54
     announce "install from conda forge:\n$(cat tmp.txt)"
     for dep in $(cat tmp.txt);
