@@ -58,9 +58,6 @@ This package is the base for `optim_esm_tools` so we also include how to install
 ```bash
 ## Optional optim_esm_tools
 git clone https://github.com/JoranAngevaare/optim_esm_tools.git ../oet
-bash ../oet/.github/scripts/write_synda_cridentials.sh
-bash ../oet/.github/scripts/download_example_data.sh
-bash ../oet/.github/scripts/install_tex.sh
 pip install -e ../oet
 python -c "import optim_esm_tools as oet; oet.utils.print_versions(); print('import cartopy'); import cartopy; print('setup map'); oet.plotting.plot.setup_map(); print('done'); oet.utils.print_versions('shapely cartopy urllib'.split())"
 pytest -vx ../oet --durations 0
