@@ -50,7 +50,7 @@ geopy==2.4.1
 gitdb==4.0.11
 gitpython==3.1.43
 google-api-core==2.23.0
-google-auth==2.35.0
+google-auth==2.36.0
 google-auth-oauthlib==1.2.1
 google-cloud-core==2.4.1
 google-cloud-storage==2.17.0
@@ -199,7 +199,7 @@ tinycss2==1.4.0
 toolz==1.0.0
 tornado; python_version>="3.9"
 tornado==6.3.3; python_version=="3.8"
-tqdm==4.66.5
+tqdm==4.67.1
 traitlets==5.14.3
 treelib==1.7.0
 tzlocal==5.2
