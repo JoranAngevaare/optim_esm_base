@@ -199,7 +199,7 @@ tinycss2==1.4.0
 toolz==1.0.0
 tornado; python_version>="3.9"
 tornado==6.3.3; python_version=="3.8"
-tqdm==4.66.5
+tqdm==4.67.1
 traitlets==5.14.3
 treelib==1.7.0
 tzlocal==5.2
