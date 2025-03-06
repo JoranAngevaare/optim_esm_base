@@ -19,9 +19,9 @@ bash Miniforge3-24.9.2-0-Linux-x86_64.sh
 
 git clone https://github.com/JoranAngevaare/optim_esm_base
 cd optim_esm_base
-conda install python=3.8.19
-bash create py38
+conda create -n py38
 conda activate py38
+conda install python=3.8.19
 bash install_software.sh --installer miniforge --no_synda
 pytest test
 
@@ -43,10 +43,10 @@ bash Miniforge3-24.9.2-0-Linux-x86_64.sh
 
 git clone https://github.com/JoranAngevaare/optim_esm_base
 cd optim_esm_base
-conda install python=3.8.19
-bash create py38
-export SOME_SYNDA_PATH=../
+conda create -n py38
 conda activate py38
+conda install python=3.8.19
+export SOME_SYNDA_PATH=../
 bash install_software.sh --installer conda --synda_dir $SOME_SYNDA_PATH
 pytest test
 
