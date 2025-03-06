@@ -39,6 +39,10 @@ jobs:
           - installer: conda
             install: fast
 
+          # Temporary to save computing power
+          - python: 3.9
+
+          - python: "3.10"
     defaults:
       run:
         # This is needed otherwise we can't activate the conda installation

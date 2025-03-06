@@ -14,7 +14,7 @@ backports.zoneinfo==0.2.1; python_version<"3.10"
 bleach==6.1.0
 bokeh==3.2.2; python_version>="3.9"
 bokeh==3.1.1; python_version=="3.8"
-cachetools==5.5.0
+cachetools==5.5.2
 cdo==1.5.7
 certifi==2024.8.30
 cftime==1.6.4.post1
