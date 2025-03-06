@@ -41,7 +41,7 @@ jobs:
 
           # Temporary to save computing power
           - python-version: 3.9
-
+          - os: ubuntu-latest
           - python-version: "3.10"
     defaults:
       run:
