@@ -33,7 +33,7 @@ distributed==2023.8.0; python_version>="3.9"  # upgrading to 2023.09 breaks deri
 distributed==2023.5.0; python_version=="3.8"
 docopt==0.6.2
 entrypoints==0.4
-executing==2.1.0
+executing==2.2.0
 fasteners==0.19
 fastjsonschema==2.20.0
 fastprogress==1.0.3
