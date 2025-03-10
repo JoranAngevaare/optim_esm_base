@@ -113,7 +113,7 @@ llvmlite==0.41.1
 locket==1.0.0
 lockfile==0.12.2
 lxml==5.3.1
-lz4==4.3.3
+lz4==4.4.3
 MarkupSafe==2.1.5
 matplotlib==3.7.3
 matplotlib-inline==0.1.7
