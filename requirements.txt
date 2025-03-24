@@ -41,7 +41,7 @@ fiona==1.9.6
 fqdn==1.5.1
 frozenlist==1.4.1
 fsspec==2025.3.0; python_version>="3.9"
-fsspec==2024.6.1
+fsspec==2024.6.1; python_version=="3.8"
 funcsigs==1.0.2
 future==1.0.0
 gcsfs==2025.3.0; python_version>="3.9"
