@@ -130,7 +130,7 @@ nbformat==5.10.4
 nc-time-axis==1.4.1
 nest-asyncio==1.6.0
 netCDF4==1.6.5
-notebook==6.5.4
+notebook==6.5.7
 notebook_shim==0.2.4
 numba==0.59.1; python_version>="3.9"
 numba==0.58.1; python_version=="3.8"
