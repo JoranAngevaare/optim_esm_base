@@ -25,20 +25,8 @@ jobs:
       matrix:
         install: [optim_tools, fast]
         installer: [miniforge]
-        os: [ubuntu-latest, ubuntu-20.04]
+        os: [ubuntu-latest]
         python-version: ['3.8', '3.9', '3.10']
-        shouldSkipConda:
-          - ${{ github.event_name == 'pull_request'}}
-
-        exclude:
-          # Conda takes a long time, only do it when the PR is merged
-          - installer: conda
-            os: ubuntu-latest
-
-          # This one oddly takes a long time since #75?!
-          - installer: conda
-            install: fast
-
     defaults:
       run:
         # This is needed otherwise we can't activate the conda installation
