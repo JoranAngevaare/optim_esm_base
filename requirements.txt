@@ -25,7 +25,7 @@ coverage==6.5.0
 coveralls==4.0.1
 dask  # managed by distributed
 data==0.4
-debugpy==1.8.13
+debugpy==1.8.14
 decorator==5.2.1
 defusedxml==0.7.1
 diptest==0.9.0
@@ -115,7 +115,7 @@ llvmlite==0.42.0; python_version>="3.9"
 llvmlite==0.41.1; python_version=="3.8"
 locket==1.0.0
 lockfile==0.12.2
-lxml==5.3.1
+lxml==5.3.2
 lz4==4.3.3
 MarkupSafe==2.1.5
 matplotlib==3.7.3
@@ -215,7 +215,7 @@ wcwidth==0.2.13
 webcolors==24.8.0
 webencodings==0.5.1
 websocket-client==1.8.0
-widgetsnbextension==4.0.13
+widgetsnbextension==4.0.14
 xarray==2023.8.0; python_version>="3.9"  # upgrading to 2023.09 breaks derivative calculation in xarray
 xarray==2023.1.0; python_version=="3.8"
 xyzservices==2025.1.0
