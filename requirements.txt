@@ -135,7 +135,7 @@ netCDF4==1.6.5
 notebook==6.5.7; python_version>="3.9"
 notebook==6.5.4; python_version=="3.8"
 notebook_shim==0.2.4
-numba==0.59.1; python_version>="3.9"
+numba==0.61.2; python_version>="3.9"
 numba==0.58.1; python_version=="3.8"
 numcodecs==0.12.1
 numpy==1.26.3; python_version>="3.9"
