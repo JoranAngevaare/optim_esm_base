@@ -25,15 +25,8 @@ jobs:
       matrix:
         install: [optim_tools, fast]
         installer: [miniforge]
-        os: [ubuntu-latest, ubuntu-20.04]
+        os: [ubuntu-latest]
         python-version: ['3.8', '3.9', '3.10']
-        shouldSkipConda:
-          - ${{ github.event_name == 'pull_request'}}
-
-        exclude:
-          - os: ubuntu-20.04
-            install: optim_tools
-
     defaults:
       run:
         # This is needed otherwise we can't activate the conda installation
