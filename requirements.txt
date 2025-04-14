@@ -111,7 +111,7 @@ jupyterlab-pygments==0.2.2; python_version=="3.8"
 jupyterlab-widgets; python_version>="3.9"
 jupyterlab-widgets==3.0.8; python_version=="3.8"
 latex==0.7.0
-llvmlite==0.42.0; python_version>="3.9"
+llvmlite==0.44.0; python_version>="3.9"
 llvmlite==0.41.1; python_version=="3.8"
 locket==1.0.0
 lockfile==0.12.2
