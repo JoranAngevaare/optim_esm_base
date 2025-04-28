@@ -220,7 +220,7 @@ websocket-client==1.8.0
 widgetsnbextension==4.0.14
 xarray==2023.8.0; python_version>="3.9"  # upgrading to 2023.09 breaks derivative calculation in xarray
 xarray==2023.1.0; python_version=="3.8"
-xyzservices==2025.1.0
+xyzservices==2025.4.0
 yarl==1.14.0
 zarr==2.16.1
 zict==3.0.0
