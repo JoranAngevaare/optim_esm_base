@@ -18,7 +18,7 @@ cachetools==5.5.2
 cdo==1.5.7
 certifi==2025.4.26
 cftime==1.6.4.post1
-click==8.1.8
+click==8.2.0
 cloudpickle==3.0.0
 comm==0.2.2
 coverage==6.5.0
