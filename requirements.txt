@@ -40,11 +40,11 @@ fastprogress==1.0.3
 fiona==1.9.6
 fqdn==1.5.1
 frozenlist==1.4.1
-fsspec==2025.3.2; python_version>="3.9"
+fsspec==2025.5.1; python_version>="3.9"
 fsspec==2024.6.1; python_version=="3.8"
 funcsigs==1.0.2
 future==1.0.0
-gcsfs==2025.3.2; python_version>="3.9"
+gcsfs==2025.5.1; python_version>="3.9"
 gcsfs==2024.6.1; python_version=="3.8"
 geographiclib==2.0
 geopandas==0.13.2
