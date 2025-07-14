@@ -2,4 +2,3 @@
 cartopy==0.21.0
 cdo==2.0.3
 pycairo==1.25.0
-r-base==4.2.2
