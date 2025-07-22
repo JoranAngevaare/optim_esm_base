@@ -25,7 +25,7 @@ coverage==6.5.0
 coveralls==4.0.1
 dask  # managed by distributed
 data==0.4
-debugpy==1.8.14
+debugpy==1.8.15
 decorator==5.2.1
 defusedxml==0.7.1
 diptest==0.9.0
