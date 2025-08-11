@@ -20,12 +20,12 @@ certifi==2025.7.14
 cftime==1.6.4.post1
 click==8.1.8
 cloudpickle==3.0.0
-comm==0.2.2
+comm==0.2.3
 coverage==6.5.0
 coveralls==4.0.1
 dask  # managed by distributed
 data==0.4
-debugpy==1.8.15
+debugpy==1.8.16
 decorator==5.2.1
 defusedxml==0.7.1
 diptest==0.10.0
@@ -50,7 +50,7 @@ geographiclib==2.0
 geopandas==0.13.2
 geopy==2.4.1
 gitdb==4.0.12
-gitpython==3.1.44
+gitpython==3.1.45
 google-api-core==2.24.2
 google-auth==2.40.3
 google-auth-oauthlib==1.2.2
