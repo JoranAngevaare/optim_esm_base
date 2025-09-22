@@ -111,7 +111,7 @@ jupyterlab-pygments==0.2.2; python_version=="3.8"
 jupyterlab-widgets; python_version>="3.9"
 jupyterlab-widgets==3.0.8; python_version=="3.8"
 latex==0.7.0
-llvmlite==0.44.0; python_version>="3.10"
+llvmlite==0.45.0; python_version>="3.10"
 llvmlite==0.43.0; python_version=="3.9"
 llvmlite==0.41.1; python_version=="3.8"
 locket==1.0.0
@@ -136,7 +136,7 @@ netCDF4==1.6.5
 notebook==6.5.7; python_version>="3.9"
 notebook==6.5.4; python_version=="3.8"
 notebook_shim==0.2.4
-numba==0.61.2; python_version>="3.10"
+numba==0.62.0; python_version>="3.10"
 numba==0.60.0; python_version=="3.9"
 numba==0.58.1; python_version=="3.8"
 numcodecs==0.12.1
