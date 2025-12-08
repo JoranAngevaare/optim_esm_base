@@ -57,7 +57,7 @@ google-auth-oauthlib==1.2.2
 google-cloud-core==2.4.3
 google-cloud-storage==3.4.0
 google-crc32c==1.5.0
-google-resumable-media==2.7.2
+google-resumable-media==2.8.0
 googleapis-common-protos==1.70.0
 h5netcdf==1.1.0
 h5py==3.11.0
