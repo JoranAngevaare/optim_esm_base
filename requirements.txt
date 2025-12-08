@@ -120,7 +120,7 @@ lxml==6.0.0
 lz4==4.3.3
 MarkupSafe==2.1.5
 matplotlib==3.7.3
-matplotlib-inline==0.1.7
+matplotlib-inline==0.2.1
 memory-profiler==0.61.0
 mistune==2.0.5
 msgpack==1.1.1
